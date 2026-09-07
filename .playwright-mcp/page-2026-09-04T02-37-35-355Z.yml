@@ -1,0 +1,164 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "Omnia" [ref=e5] [cursor=pointer]:
+      - /url: /en
+    - generic [ref=e6]:
+      - link "Home" [ref=e7] [cursor=pointer]:
+        - /url: /en
+      - link "Product" [ref=e8] [cursor=pointer]:
+        - /url: /en/product
+      - link "About" [ref=e9] [cursor=pointer]:
+        - /url: /en/about
+      - link "FAQ" [ref=e10] [cursor=pointer]:
+        - /url: /en/faq
+      - link "Skin Quiz" [ref=e11] [cursor=pointer]:
+        - /url: /en/quiz
+    - generic [ref=e12]:
+      - group "Language" [ref=e13]:
+        - button "EN" [pressed] [ref=e14]
+        - button "AR" [ref=e15]
+      - link "Shop" [ref=e16] [cursor=pointer]:
+        - /url: /en/product
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - heading "Luminous skin, from within." [level=1] [ref=e19]:
+        - text: Luminous skin,
+        - text: from within.
+      - paragraph [ref=e20]: One capsule a day of glutathione, vitamins B3, E and C, and hydrolyzed collagen. Quietly working so your skin looks rested, even, and alive, without a ten-step routine.
+      - generic [ref=e21]:
+        - link "Shop now" [ref=e22] [cursor=pointer]:
+          - /url: /en/product
+          - text: Shop now
+          - img [ref=e23]
+        - link "Skin Quiz" [ref=e26] [cursor=pointer]:
+          - /url: /en/quiz
+          - text: Skin Quiz
+          - img [ref=e27]
+        - link "Read the formula" [ref=e30] [cursor=pointer]:
+          - /url: /en/faq
+    - img "Omnia Glutathione — your natural glow" [ref=e32]
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - paragraph [ref=e36]: Real results
+        - heading "Brighter, more even skin — from the inside." [level=2] [ref=e37]
+      - paragraph [ref=e38]: What consistent daily use of Omnia Glutathione looks like. Individual results vary; visible change typically appears at 4–6 weeks.
+    - figure [ref=e39]:
+      - img "Before and after using Omnia Glutathione"
+  - generic [ref=e41]:
+    - generic:
+      - img "Seven days to brighter skin with Omnia"
+    - generic [ref=e42]:
+      - paragraph [ref=e43]: The 7-day shift
+      - paragraph [ref=e44]: Skin that looks rested, even, and alive — without a ten-step routine.
+      - paragraph [ref=e45]: One capsule, twice a day. The first week is about hydration and glow; the next four are about tone. The compound effect of glutathione, vitamins B3, E, C and hydrolyzed collagen does the quiet work.
+      - link "Shop the formula" [ref=e46] [cursor=pointer]:
+        - /url: /en/product
+        - text: Shop the formula
+        - img [ref=e47]
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - figure [ref=e52]:
+        - img "Woman smiling with the Omnia Glutathione bottle" [ref=e53]
+      - figure [ref=e54]:
+        - img "Your natural glow with Omnia Glutathione" [ref=e55]
+    - generic [ref=e56]:
+      - paragraph [ref=e57]: Deep hydration, skin renewal, even tone — one daily capsule.
+      - link "Why Omnia works" [ref=e58] [cursor=pointer]:
+        - /url: /en/about
+  - region "Real results from real women" [ref=e59]:
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - paragraph [ref=e62]: Real results from real women
+        - paragraph [ref=e63]: 14,000+ women trust Omnia for their daily glow
+      - generic [ref=e64]:
+        - region "Real results from real women" [ref=e65]:
+          - article [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - img [ref=e69]
+                - img [ref=e71]
+                - img [ref=e73]
+                - img [ref=e75]
+                - img [ref=e77]
+              - paragraph [ref=e79]: "\"The difference in my skin tone is undeniable. My dark spots have faded significantly and my skin looks so much brighter. I've tried so many products but this is the only one that actually worked from within.\""
+              - generic [ref=e80]:
+                - generic [ref=e81]:
+                  - generic [ref=e83]: S
+                  - generic [ref=e84]:
+                    - paragraph [ref=e85]: Sarah M.
+                    - paragraph [ref=e86]:
+                      - img [ref=e87]
+                      - text: Dubai, UAE
+                - generic [ref=e90]:
+                  - img [ref=e91]
+                  - generic [ref=e94]: 8 weeks
+                  - generic [ref=e95]: ·
+                  - generic [ref=e96]: Hyperpigmentation
+          - article [ref=e97]:
+            - generic [ref=e98]:
+              - generic [ref=e99]:
+                - img [ref=e100]
+                - img [ref=e102]
+                - img [ref=e104]
+                - img [ref=e106]
+                - img [ref=e108]
+              - paragraph [ref=e110]: "\"I was skeptical about supplements but my friend recommended Omnia. Within a month my skin felt more hydrated and the dullness was gone. Now at 6 weeks my colleagues keep asking what I'm doing differently.\""
+              - generic [ref=e111]:
+                - generic [ref=e112]:
+                  - generic [ref=e114]: L
+                  - generic [ref=e115]:
+                    - paragraph [ref=e116]: Layla A.
+                    - paragraph [ref=e117]:
+                      - img [ref=e118]
+                      - text: Riyadh, KSA
+                - generic [ref=e121]:
+                  - img [ref=e122]
+                  - generic [ref=e125]: 6 weeks
+                  - generic [ref=e126]: ·
+                  - generic [ref=e127]: Dullness
+          - article [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - img [ref=e131]
+                - img [ref=e133]
+                - img [ref=e135]
+                - img [ref=e137]
+                - img [ref=e139]
+              - paragraph [ref=e141]: "\"Post-acne marks have always been my struggle. Omnia didn't just help fade them — my skin texture improved too. It's become a non-negotiable part of my routine. The subscribe option makes it effortless.\""
+              - generic [ref=e142]:
+                - generic [ref=e143]:
+                  - generic [ref=e145]: E
+                  - generic [ref=e146]:
+                    - paragraph [ref=e147]: Emma R.
+                    - paragraph [ref=e148]:
+                      - img [ref=e149]
+                      - text: London, UK
+                - generic [ref=e152]:
+                  - img [ref=e153]
+                  - generic [ref=e156]: 12 weeks
+                  - generic [ref=e157]: ·
+                  - generic [ref=e158]: Post-acne marks
+        - button "Previous review" [disabled]:
+          - img
+        - button "Next review" [ref=e159]:
+          - img [ref=e160]
+        - link "See more on Instagram" [ref=e163] [cursor=pointer]:
+          - /url: https://instagram.com/omnia.beautylab
+          - img [ref=e164]
+          - text: See more on Instagram
+  - contentinfo [ref=e166]:
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - paragraph [ref=e169]: Trusted by over fourteen thousand women
+        - paragraph [ref=e170]: Not an overnight miracle. A daily discipline that shows, skin that looks like it slept well every day.
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - paragraph [ref=e173]: Glutathione
+          - paragraph [ref=e174]: the body's master antioxidant
+        - generic [ref=e175]:
+          - paragraph [ref=e176]: Collagen I & III
+          - paragraph [ref=e177]: firm, bouncy, even tone
+        - generic [ref=e178]:
+          - paragraph [ref=e179]: Vitamins B3 E C
+          - paragraph [ref=e180]: calm, rested radiance

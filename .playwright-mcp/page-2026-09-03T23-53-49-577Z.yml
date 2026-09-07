@@ -1,0 +1,66 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "Omnia" [ref=e5] [cursor=pointer]:
+      - /url: /en
+    - generic [ref=e6]:
+      - link "Home" [ref=e7] [cursor=pointer]:
+        - /url: /en
+      - link "Product" [ref=e8] [cursor=pointer]:
+        - /url: /en/product
+      - link "About" [ref=e9] [cursor=pointer]:
+        - /url: /en/about
+      - link "FAQ" [ref=e10] [cursor=pointer]:
+        - /url: /en/faq
+    - generic [ref=e11]:
+      - group "Language" [ref=e12]:
+        - button "EN" [pressed] [ref=e13]
+        - button "AR" [ref=e14]
+      - link "Shop" [ref=e15] [cursor=pointer]:
+        - /url: /en/product
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - figure [ref=e19]:
+        - img "Three skincare tips from Omnia Beautylab" [ref=e20]
+      - generic [ref=e21]:
+        - heading "Common questions." [level=1] [ref=e22]:
+          - text: Common
+          - text: questions.
+        - paragraph [ref=e23]: New to glutathione? Start here. Everything you need to know about Omnia, how it works, and how to get the most from your daily routine.
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - button "undefined - close" [expanded] [ref=e26]:
+              - img [ref=e28]
+            - paragraph [ref=e30]
+          - button "undefined - open" [ref=e32]:
+            - img [ref=e34]
+          - button "undefined - open" [ref=e37]:
+            - img [ref=e39]
+          - button "undefined - open" [ref=e42]:
+            - img [ref=e44]
+          - button "undefined - open" [ref=e47]:
+            - img [ref=e49]
+          - button "undefined - open" [ref=e52]:
+            - img [ref=e54]
+          - button "undefined - open" [ref=e57]:
+            - img [ref=e59]
+          - button "undefined - open" [ref=e62]:
+            - img [ref=e64]
+        - paragraph [ref=e67]:
+          - text: Still have questions?
+          - link "hello@omnia.com" [ref=e68] [cursor=pointer]:
+            - /url: mailto:hello@omnia.com
+  - contentinfo [ref=e69]:
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - paragraph [ref=e72]: Trusted by over fourteen thousand women
+        - paragraph [ref=e73]: Not an overnight miracle. A daily discipline that shows, skin that looks like it slept well every day.
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - paragraph [ref=e76]: Glutathione
+          - paragraph [ref=e77]: the body's master antioxidant
+        - generic [ref=e78]:
+          - paragraph [ref=e79]: Collagen I & III
+          - paragraph [ref=e80]: firm, bouncy, even tone
+        - generic [ref=e81]:
+          - paragraph [ref=e82]: Vitamins B3 E C
+          - paragraph [ref=e83]: calm, rested radiance

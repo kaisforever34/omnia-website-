@@ -1,0 +1,76 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "Omnia" [ref=e5] [cursor=pointer]:
+      - /url: /en
+    - generic [ref=e6]:
+      - link "Home" [ref=e7] [cursor=pointer]:
+        - /url: /en
+      - link "Product" [ref=e8] [cursor=pointer]:
+        - /url: /en/product
+      - link "About" [ref=e9] [cursor=pointer]:
+        - /url: /en/about
+      - link "FAQ" [ref=e10] [cursor=pointer]:
+        - /url: /en/faq
+    - generic [ref=e11]:
+      - group "Language" [ref=e12]:
+        - button "EN" [pressed] [ref=e13]
+        - button "AR" [ref=e14]
+      - link "Shop" [ref=e15] [cursor=pointer]:
+        - /url: /en/product
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - heading "Luminous skin, from within." [level=1] [ref=e18]:
+        - text: Luminous skin,
+        - text: from within.
+      - paragraph [ref=e19]: One capsule a day of glutathione, vitamins B3, E and C, and hydrolyzed collagen. Quietly working so your skin looks rested, even, and alive, without a ten-step routine.
+      - generic [ref=e20]:
+        - link "Shop now" [ref=e21] [cursor=pointer]:
+          - /url: /en/product
+          - text: Shop now
+          - img [ref=e22]
+        - link "Read the formula" [ref=e25] [cursor=pointer]:
+          - /url: /en/faq
+    - img "Omnia Glutathione — your natural glow" [ref=e27]
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - paragraph [ref=e31]: Real results
+        - heading "Brighter, more even skin — from the inside." [level=2] [ref=e32]
+      - paragraph [ref=e33]: What consistent daily use of Omnia Glutathione looks like. Individual results vary; visible change typically appears at 4–6 weeks.
+    - figure [ref=e34]:
+      - img "Before and after using Omnia Glutathione" [ref=e35]
+  - generic [ref=e37]:
+    - img "Seven days to brighter skin with Omnia" [ref=e39]
+    - generic [ref=e40]:
+      - paragraph [ref=e41]: The 7-day shift
+      - paragraph [ref=e42]: Skin that looks rested, even, and alive — without a ten-step routine.
+      - paragraph [ref=e43]: One capsule, twice a day. The first week is about hydration and glow; the next four are about tone. The compound effect of glutathione, vitamins B3, E, C and hydrolyzed collagen does the quiet work.
+      - link "Shop the formula" [ref=e44] [cursor=pointer]:
+        - /url: /en/product
+        - text: Shop the formula
+        - img [ref=e45]
+  - generic [ref=e48]:
+    - generic [ref=e49]:
+      - figure [ref=e50]:
+        - img "Woman smiling with the Omnia Glutathione bottle" [ref=e51]
+      - figure [ref=e52]:
+        - img "Your natural glow with Omnia Glutathione" [ref=e53]
+    - generic [ref=e54]:
+      - paragraph [ref=e55]: Deep hydration, skin renewal, even tone — one daily capsule.
+      - link "Why Omnia works" [ref=e56] [cursor=pointer]:
+        - /url: /en/about
+  - contentinfo [ref=e57]:
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: Trusted by over fourteen thousand women
+        - paragraph [ref=e61]: Not an overnight miracle. A daily discipline that shows, skin that looks like it slept well every day.
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Glutathione
+          - paragraph [ref=e65]: the body's master antioxidant
+        - generic [ref=e66]:
+          - paragraph [ref=e67]: Collagen I & III
+          - paragraph [ref=e68]: firm, bouncy, even tone
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: Vitamins B3 E C
+          - paragraph [ref=e71]: calm, rested radiance

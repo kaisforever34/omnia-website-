@@ -1,0 +1,108 @@
+- generic [ref=e2]:
+  - link "Chat on WhatsApp" [ref=e3] [cursor=pointer]:
+    - /url: https://wa.me/966501234567?text=Hi!%20I'd%20like%20to%20know%20more%20about%20Omnia%20Glutathione.
+    - img [ref=e4]
+  - generic [ref=e6]:
+    - navigation [ref=e7]:
+      - link "Omnia" [ref=e8] [cursor=pointer]:
+        - /url: /en
+      - generic [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /en
+        - link "Product" [ref=e11] [cursor=pointer]:
+          - /url: /en/product
+        - link "About" [ref=e12] [cursor=pointer]:
+          - /url: /en/about
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /en/faq
+        - link "Skin Quiz" [ref=e14] [cursor=pointer]:
+          - /url: /en/quiz
+      - generic [ref=e15]:
+        - group "Language" [ref=e16]:
+          - button "EN" [pressed] [ref=e17]
+          - button "AR" [ref=e18]
+        - link "Shop" [ref=e19] [cursor=pointer]:
+          - /url: /en/product
+    - main [ref=e20]:
+      - generic [ref=e22]:
+        - img "Omnia Glutathione bottle on desk" [ref=e27]
+        - generic [ref=e28]:
+          - paragraph [ref=e30]: Omnia L-Glutathione
+          - heading "Daily glow, inside out." [level=1] [ref=e32]:
+            - text: Daily glow,
+            - text: inside out.
+          - paragraph [ref=e34]: Formulated with glutathione, vitamins B3, E and C, and hydrolyzed collagen to support skin brightness and elasticity with every capsule.
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: 500mg Glutathione
+              - generic [ref=e39]: per capsule
+            - generic [ref=e40]:
+              - generic [ref=e41]: 60 Capsules
+              - generic [ref=e42]: per bottle
+            - generic [ref=e43]:
+              - generic [ref=e44]: Type I & III
+              - generic [ref=e45]: Collagen peptides
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - generic [ref=e49]: $79
+              - generic [ref=e50]: $79
+            - generic [ref=e52]:
+              - button "One-time purchase" [ref=e53]
+              - button "Subscribe & Save 15%" [ref=e54]
+            - generic [ref=e55]:
+              - link "Shop now" [ref=e57] [cursor=pointer]:
+                - /url: "#order"
+                - text: Shop now
+                - img [ref=e58]
+              - paragraph [ref=e62]: Free shipping on orders over $50
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - button "Ingredients" [ref=e65]: Ingredients
+          - button "How to use" [ref=e67]
+        - generic [ref=e69]:
+          - generic [ref=e72]:
+            - paragraph [ref=e73]: L-Glutathione
+            - paragraph [ref=e74]: The body's master antioxidant. Supports skin brightness by neutralizing free radicals and promoting a more even, luminous complexion.
+          - generic [ref=e77]:
+            - paragraph [ref=e78]: Vitamin C
+            - paragraph [ref=e79]: Supports collagen production, boosts antioxidant defense, and helps even skin tone for a healthier glow.
+          - generic [ref=e82]:
+            - paragraph [ref=e83]: Vitamin E
+            - paragraph [ref=e84]: Nourishes the skin barrier, locks in hydration, and protects against environmental stress.
+          - generic [ref=e87]:
+            - paragraph [ref=e88]: Niacinamide (B3)
+            - paragraph [ref=e89]: Refines texture and evens skin tone. Works gently with glutathione to enhance brightness without irritation.
+          - generic [ref=e92]:
+            - paragraph [ref=e93]: Hydrolyzed Collagen (Type I & III)
+            - paragraph [ref=e94]: Small peptide fragments that support skin firmness and elasticity from the inside out.
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - heading "Transparent labels. Real results." [level=2] [ref=e99]:
+            - text: Transparent labels.
+            - text: Real results.
+          - paragraph [ref=e100]: Every ingredient is listed clearly on the label. No hidden fillers, no proprietary blends. Just what works, at the dose that works.
+        - generic:
+          - generic:
+            - img "Glutathione capsules enriched with vitamins and collagen"
+    - contentinfo [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - paragraph [ref=e104]: Trusted by over fourteen thousand women
+          - paragraph [ref=e105]: Not an overnight miracle. A daily discipline that shows, skin that looks like it slept well every day.
+        - generic [ref=e109]:
+          - paragraph [ref=e110]: "Join 14,000+ women who start their day with Omnia. Plus: skin tips, early access, and exclusive offers."
+          - generic [ref=e111]:
+            - img [ref=e112]
+            - textbox "Enter your email" [ref=e115]
+          - button "Unlock my discount" [ref=e116]
+          - paragraph [ref=e117]: No spam. Unsubscribe anytime.
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: Glutathione
+            - paragraph [ref=e121]: the body's master antioxidant
+          - generic [ref=e122]:
+            - paragraph [ref=e123]: Collagen I & III
+            - paragraph [ref=e124]: firm, bouncy, even tone
+          - generic [ref=e125]:
+            - paragraph [ref=e126]: Vitamins B3 E C
+            - paragraph [ref=e127]: calm, rested radiance

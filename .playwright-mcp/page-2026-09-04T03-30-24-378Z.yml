@@ -1,0 +1,174 @@
+- generic [ref=e2]:
+  - link "التواصل عبر واتساب" [ref=e3] [cursor=pointer]:
+    - /url: https://wa.me/966501234567?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B!%20%D8%A3%D9%88%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%A3%D9%88%D9%85%D9%86%D9%8A%D8%A7%20%D8%BA%D9%84%D9%88%D8%AA%D8%A7%D8%AB%D9%8A%D9%88%D9%86.
+    - img [ref=e4]
+  - generic [ref=e6]:
+    - navigation [ref=e7]:
+      - link "أومنيا" [ref=e8] [cursor=pointer]:
+        - /url: /ar
+      - generic [ref=e9]:
+        - link "الرئيسية" [ref=e10] [cursor=pointer]:
+          - /url: /ar
+        - link "المنتج" [ref=e11] [cursor=pointer]:
+          - /url: /ar/product
+        - link "من نحن" [ref=e12] [cursor=pointer]:
+          - /url: /ar/about
+        - link "الأسئلة" [ref=e13] [cursor=pointer]:
+          - /url: /ar/faq
+        - link "اختبار البشرة" [ref=e14] [cursor=pointer]:
+          - /url: /ar/quiz
+      - generic [ref=e15]:
+        - group "Language" [ref=e16]:
+          - button "EN" [ref=e17]
+          - button "AR" [pressed] [ref=e18]
+        - link "تسوّق" [ref=e19] [cursor=pointer]:
+          - /url: /ar/product
+    - main [ref=e20]:
+      - generic [ref=e21]:
+        - heading "بشرة مضيئة، من الداخل إلى الخارج." [level=1] [ref=e22]:
+          - text: بشرة مضيئة،
+          - text: من الداخل إلى الخارج.
+        - paragraph [ref=e23]: كبسولة واحدة يومياً من الغلوتاثيون وفيتامينات B3 وE وC والكولاجين المتحلل. تعمل في هدوء لتبدو بشرتك أكثر راحة وتجانساً وحياة، دون روتين من عشر خطوات.
+        - generic [ref=e24]:
+          - link "تسوّق الآن" [ref=e25] [cursor=pointer]:
+            - /url: /ar/product
+            - text: تسوّق الآن
+            - img [ref=e26]
+          - link "اختبار البشرة" [ref=e29] [cursor=pointer]:
+            - /url: /ar/quiz
+            - text: اختبار البشرة
+            - img [ref=e30]
+          - link "اكتشفي التركيبة" [ref=e33] [cursor=pointer]:
+            - /url: /ar/faq
+      - img "Omnia Glutathione — your natural glow" [ref=e35]
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: نتائج حقيقية
+          - heading "بشرة أكثر إشراقاً وتجانساً — من الداخل." [level=2] [ref=e40]
+        - paragraph [ref=e41]: هكذا يبدو الاستخدام اليومي المنتظم لأومنيا غلوتاثيون. النتائج تختلف من شخص لآخر؛ عادةً يظهر التغيير الملحوظ بعد ٤ إلى ٦ أسابيع.
+      - figure [ref=e42]:
+        - img "Before and after using Omnia Glutathione" [ref=e43]
+    - generic [ref=e45]:
+      - img "Seven days to brighter skin with Omnia" [ref=e47]
+      - generic [ref=e48]:
+        - paragraph [ref=e49]: تغيّر سبعة أيام
+        - paragraph [ref=e50]: بشرة تبدو مرتاحة، متجانسة، وحيّة — دون روتين من عشر خطوات.
+        - paragraph [ref=e51]: كبسولة واحدة، مرتين يومياً. الأسبوع الأول عن الترطيب والإشراق؛ والأسابيع الأربعة التالية عن توحيد اللون. التأثير التراكمي للغلوتاثيون وفيتامينات B3 وE وC والكولاجين المتحلل يقوم بالعمل في هدوء.
+        - link "تسوّقي التركيبة" [ref=e52] [cursor=pointer]:
+          - /url: /ar/product
+          - text: تسوّقي التركيبة
+          - img [ref=e53]
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - figure [ref=e58]:
+          - img "Woman smiling with the Omnia Glutathione bottle" [ref=e59]
+        - figure [ref=e60]:
+          - img "Your natural glow with Omnia Glutathione" [ref=e61]
+      - generic [ref=e62]:
+        - paragraph [ref=e63]: ترطيب عميق، تجدد للبشرة، لون متجانس — كبسولة واحدة يومياً.
+        - link "لماذا أومنيا فعّالة" [ref=e64] [cursor=pointer]:
+          - /url: /ar/about
+    - region "نتائج حقيقية من نساء حقيقيات" [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - paragraph [ref=e68]: نتائج حقيقية من نساء حقيقيات
+          - paragraph [ref=e69]: أكثر من ١٤٠٠٠ امرأة يثقن بأومنيا لإشراقهن اليومي
+        - generic [ref=e70]:
+          - region "نتائج حقيقية من نساء حقيقيات" [ref=e71]:
+            - article [ref=e72]:
+              - generic [ref=e73]:
+                - generic [ref=e74]:
+                  - img [ref=e75]
+                  - img [ref=e77]
+                  - img [ref=e79]
+                  - img [ref=e81]
+                  - img [ref=e83]
+                - paragraph [ref=e85]: "\"الفرق في لون بشرتي لا يُنكر. بقعي الداكنة تلاشت بشكل ملحوظ وبشرتي تبدو أكثر إشراقاً. جربت الكثير من المنتجات لكن هذا الوحيد الذي عمل من الداخل.\""
+                - generic [ref=e86]:
+                  - generic [ref=e87]:
+                    - generic [ref=e89]: س
+                    - generic [ref=e90]:
+                      - paragraph [ref=e91]: سارة م.
+                      - paragraph [ref=e92]:
+                        - img [ref=e93]
+                        - text: دبي، الإمارات
+                  - generic [ref=e96]:
+                    - img [ref=e97]
+                    - generic [ref=e100]: ٨ أسابيع
+                    - generic [ref=e101]: ·
+                    - generic [ref=e102]: التصبغات
+            - article [ref=e103]:
+              - generic [ref=e104]:
+                - generic [ref=e105]:
+                  - img [ref=e106]
+                  - img [ref=e108]
+                  - img [ref=e110]
+                  - img [ref=e112]
+                  - img [ref=e114]
+                - paragraph [ref=e116]: "\"كنت متشككة في المكملات لكن صديقتي نصحتني بأومنيا. خلال شهر بشرتي أصبحت أكثر ترطيباً والبهتان زال. الآن في ٦ أسابيع زميلاتي يسألن ماذا غيرت في روتيني.\""
+                - generic [ref=e117]:
+                  - generic [ref=e118]:
+                    - generic [ref=e120]: ل
+                    - generic [ref=e121]:
+                      - paragraph [ref=e122]: ليلى ع.
+                      - paragraph [ref=e123]:
+                        - img [ref=e124]
+                        - text: الرياض، السعودية
+                  - generic [ref=e127]:
+                    - img [ref=e128]
+                    - generic [ref=e131]: ٦ أسابيع
+                    - generic [ref=e132]: ·
+                    - generic [ref=e133]: البهتان
+            - article [ref=e134]:
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - img [ref=e137]
+                  - img [ref=e139]
+                  - img [ref=e141]
+                  - img [ref=e143]
+                  - img [ref=e145]
+                - paragraph [ref=e147]: "\"آثار الحبوب كانت مشكلتي الدائمة. أومنيا لم يساعد فقط في تلاشيها — تحسن ملمس بشرتي أيضاً. أصبح جزءاً لا غنى عنه في روتيني. خيار الاشتراك يجعله سهلاً.\""
+                - generic [ref=e148]:
+                  - generic [ref=e149]:
+                    - generic [ref=e151]: إ
+                    - generic [ref=e152]:
+                      - paragraph [ref=e153]: إيما ر.
+                      - paragraph [ref=e154]:
+                        - img [ref=e155]
+                        - text: لندن، بريطانيا
+                  - generic [ref=e158]:
+                    - img [ref=e159]
+                    - generic [ref=e162]: ١٢ أسبوع
+                    - generic [ref=e163]: ·
+                    - generic [ref=e164]: آثار حبوب
+          - button "Previous review" [disabled]:
+            - img
+          - button "Next review" [ref=e165]:
+            - img [ref=e166]
+          - link "شاهد المزيد على إنستغرام" [ref=e169] [cursor=pointer]:
+            - /url: https://instagram.com/omnia.beautylab
+            - img [ref=e170]
+            - text: شاهد المزيد على إنستغرام
+    - contentinfo [ref=e172]:
+      - generic [ref=e173]:
+        - generic [ref=e174]:
+          - paragraph [ref=e175]: يثق بنا أكثر من أربعة عشر ألف امرأة
+          - paragraph [ref=e176]: ليست معجزة بين ليلة وضحاها. التزام يومي يظهر أثره على بشرتك، فتصبح وكأنها نامت نوماً هادئاً كل يوم.
+        - generic [ref=e180]:
+          - paragraph [ref=e181]: "انضمي إلى ١٤٠٠٠+ امرأة يبدأن يومهن مع أومنيا. بالإضافة إلى: نصائح للبشرة، وصول مبكر، وعروض حصرية."
+          - generic [ref=e182]:
+            - img [ref=e183]
+            - textbox "أدخلي بريدكِ الإلكتروني" [ref=e186]
+          - button "احصلي على خصمي" [ref=e187]
+          - paragraph [ref=e188]: لا رسائل مزعجة. إلغاء الاشتراك في أي وقت.
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - paragraph [ref=e191]: الغلوتاثيون
+            - paragraph [ref=e192]: مضاد الأكسدة الرئيسي للجسم
+          - generic [ref=e193]:
+            - paragraph [ref=e194]: كولاجين النوع الأول والثالث
+            - paragraph [ref=e195]: بشرة مشدودة، نضرة، ولونها متجانس
+          - generic [ref=e196]:
+            - paragraph [ref=e197]: فيتامينات B3، E، C
+            - paragraph [ref=e198]: إشراقة هادئة ومسترخية

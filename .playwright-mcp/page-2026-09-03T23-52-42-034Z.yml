@@ -1,0 +1,86 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "أومنيا" [ref=e5] [cursor=pointer]:
+      - /url: /ar
+    - generic [ref=e6]:
+      - link "الرئيسية" [ref=e7] [cursor=pointer]:
+        - /url: /ar
+      - link "المنتج" [ref=e8] [cursor=pointer]:
+        - /url: /ar/product
+      - link "من نحن" [ref=e9] [cursor=pointer]:
+        - /url: /ar/about
+      - link "الأسئلة" [ref=e10] [cursor=pointer]:
+        - /url: /ar/faq
+    - generic [ref=e11]:
+      - group "Language" [ref=e12]:
+        - button "EN" [ref=e13]
+        - button "AR" [pressed] [ref=e14]
+      - link "تسوّق" [ref=e15] [cursor=pointer]:
+        - /url: /ar/product
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - img "Omnia Glutathione bottle on desk" [ref=e20]
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: أومنيا إل-غلوتاثيون
+        - heading "إشراق يومي، من الداخل والخارج." [level=1] [ref=e23]:
+          - text: إشراق يومي،
+          - text: من الداخل والخارج.
+        - paragraph [ref=e24]: تركيبة مدعّمة بالغلوتاثيون وفيتامينات B3 وE وC والكولاجين المتحلل لدعم إشراق البشرة ومرونتها مع كل كبسولة.
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - generic [ref=e27]: ٥٠٠ ملغ غلوتاثيون
+            - generic [ref=e28]: لكل كبسولة
+          - generic [ref=e29]:
+            - generic [ref=e30]: ٦٠ كبسولة
+            - generic [ref=e31]: لكل عبوة
+          - generic [ref=e32]:
+            - generic [ref=e33]: النوع الأول والثالث
+            - generic [ref=e34]: ببتيدات الكولاجين
+        - generic [ref=e35]:
+          - link "تسوّق الآن" [ref=e36] [cursor=pointer]:
+            - /url: "#order"
+            - text: تسوّق الآن
+            - img [ref=e37]
+          - paragraph [ref=e40]: شحن مجاني للطلبات التي تتجاوز ٥٠ دولاراً
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - button "المكونات" [ref=e43]: المكونات
+        - button "طريقة الاستخدام" [ref=e45]
+      - generic [ref=e46]:
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: إل-غلوتاثيون
+          - paragraph [ref=e51]: مضاد الأكسدة الرئيسي في الجسم. يدعم إشراق البشرة من خلال تحييد الجذور الحرة وتعزيز بشرة أكثر تجانساً وإضاءة.
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: فيتامين C
+          - paragraph [ref=e56]: يدعم إنتاج الكولاجين، ويعزز دفاع مضادات الأكسدة، ويساعد على توحيد لون البشرة لإشراق أكثر صحة.
+        - generic [ref=e59]:
+          - paragraph [ref=e60]: فيتامين E
+          - paragraph [ref=e61]: يغذي حاجز البشرة، ويحفظ الترطيب، ويحمي من العوامل البيئية الضارة.
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: نياسيناميد (B3)
+          - paragraph [ref=e66]: ينعّم الملمس ويوحّد اللون. يعمل بتجانس مع الغلوتاثيون لتعزيز الإشراق دون تهيّج.
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: كولاجين متحلل (النوع الأول والثالث)
+          - paragraph [ref=e71]: ببتيدات صغيرة تدعم تماسك البشرة ومرونتها من الداخل إلى الخارج.
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - heading "ملصق شفاف. نتائج حقيقية." [level=2] [ref=e75]:
+          - text: ملصق شفاف.
+          - text: نتائج حقيقية.
+        - paragraph [ref=e76]: كل مكوّن مذكور بوضوح على الملصق. لا مواد مالئة مخفية، لا خلطات سرية. فقط ما ينفع، بالجرعة التي تنفع.
+      - img "Glutathione capsules enriched with vitamins and collagen" [ref=e78]
+  - contentinfo [ref=e79]:
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: يثق بنا أكثر من أربعة عشر ألف امرأة
+        - paragraph [ref=e83]: ليست معجزة بين ليلة وضحاها. التزام يومي يظهر أثره على بشرتك، فتصبح وكأنها نامت نوماً هادئاً كل يوم.
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: الغلوتاثيون
+          - paragraph [ref=e87]: مضاد الأكسدة الرئيسي للجسم
+        - generic [ref=e88]:
+          - paragraph [ref=e89]: كولاجين النوع الأول والثالث
+          - paragraph [ref=e90]: بشرة مشدودة، نضرة، ولونها متجانس
+        - generic [ref=e91]:
+          - paragraph [ref=e92]: فيتامينات B3، E، C
+          - paragraph [ref=e93]: إشراقة هادئة ومسترخية

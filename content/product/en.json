@@ -1,0 +1,59 @@
+{
+  "eyebrow": "Interactive 3D formulation",
+  "h2a": "Transparent formula.",
+  "h2b": "Clinically proven ingredients.",
+  "lead": "Every ingredient is listed with exact potency. Zero proprietary blends, zero harsh bleaching agents, and zero filler.",
+  "viewerHint": "Drag or move cursor to inspect all 4 angles",
+  "tiers": [
+    {
+      "id": "1-bottle",
+      "name": "1 Month Starter",
+      "subtitle": "60 capsules · 30-day supply",
+      "price": 79,
+      "pricePerBottle": 79,
+      "count": 1,
+      "badge": null,
+      "popular": false
+    },
+    {
+      "id": "2-bottles",
+      "name": "2 Month Duo",
+      "subtitle": "120 capsules · 60-day supply",
+      "price": 142,
+      "originalPrice": 158,
+      "pricePerBottle": 71,
+      "count": 2,
+      "badge": "Save 10%",
+      "popular": true
+    },
+    {
+      "id": "3-bottles",
+      "name": "3 Month Transformation",
+      "subtitle": "180 capsules · 90-day supply",
+      "price": 201,
+      "originalPrice": 237,
+      "pricePerBottle": 67,
+      "count": 3,
+      "badge": "Save 15% · Best Value",
+      "popular": false
+    }
+  ],
+  "images": [
+    { "src": "/product/front.png", "alt": "Omnia Front" },
+    { "src": "/product/right.png", "alt": "Right view" }
+  ],
+  "ingredients": [
+    { "name": "500mg L-Glutathione", "amount": "500 mg", "desc": "The body's master antioxidant. Neutralizes oxidative stress and inhibits excess melanin synthesis for an even, luminous complexion." },
+    { "name": "Hydrolyzed Collagen (Type I & III)", "amount": "300 mg", "desc": "Bioavailable peptide micro-fragments that replenish the dermal matrix, restoring elasticity, firmness, and bounce." },
+    { "name": "Vitamin C (Pure Ascorbic Acid)", "amount": "150 mg", "desc": "Essential cofactor that boosts natural glutathione recycling and accelerates cellular collagen synthesis." },
+    { "name": "Niacinamide (Vitamin B3)", "amount": "50 mg", "desc": "Calms inflammation, supports the lipid moisture barrier, and visibly refines skin texture." },
+    { "name": "Vitamin E (d-Alpha Tocopherol)", "amount": "30 IU", "desc": "Fat-soluble antioxidant protecting cellular membranes against daily UV and environmental stressors." }
+  ],
+  "howTo": [
+    { "step": "01", "title": "Daily Dosage", "desc": "Take 2 capsules once daily with a full glass of water, preferably alongside breakfast or your morning meal." },
+    { "step": "02", "title": "Hydration & Protection", "desc": "Drink 2–2.5 liters of water daily to support cellular detoxification, and apply broad-spectrum SPF every morning." },
+    { "step": "03", "title": "Cumulative Transformation", "desc": "Week 1–2 boosts hydration and clarity. Weeks 4–6 reveal noticeable evening of tone and dark mark reduction." }
+  ],
+  "orderTierCta": "Order this package via WhatsApp",
+  "orderGuarantee": "30-Day satisfaction guarantee · Secure COD & card checkout via concierge"
+}

@@ -1,0 +1,347 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "cms: create {{collection}} {{slug}}"
+    update: "cms: update {{collection}} {{slug}}"
+    delete: "cms: delete {{collection}} {{slug}}"
+    uploadMedia: "cms: upload {{path}}"
+    openAuthoring: "{{message}}"
+
+# Draft / preview before publish + git history = undo
+publish_mode: editorial_workflow
+media_folder: "public/uploads"
+public_folder: "/uploads"
+site_url: "https://omnia.netlify.app"
+display_url: "https://omnia.netlify.app"
+logo_url: "/favicon.svg"
+locale: en
+
+collections:
+  # ───────── HERO ─────────
+  - name: "hero_en"
+    label: "Hero — English"
+    label_singular: "Hero EN"
+    files:
+      - label: "Hero Section (EN)"
+        name: "hero_en"
+        file: "content/hero/en.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string", hint: "Small caps above headline" }
+          - { label: "Headline Line 1", name: "h1a", widget: "string" }
+          - { label: "Headline Line 2 (italic)", name: "h1b", widget: "string" }
+          - { label: "Lead / Subheadline", name: "lead", widget: "text" }
+          - { label: "Primary CTA Text", name: "primaryCta", widget: "string", hint: "e.g. Ask on WhatsApp — $79" }
+          - { label: "Secondary CTA Text", name: "secondaryCta", widget: "string" }
+          - { label: "Hero Image", name: "heroImage", widget: "image", hint: "900×900 transparent PNG recommended", allow_multiple: false }
+          - label: "Trust Row (directly under CTA)"
+            name: "trust"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Item 1 — e.g. 14,000+ women", name: "a", widget: "string" }
+              - { label: "Item 2 — e.g. Ships in 24h", name: "b", widget: "string" }
+              - { label: "Item 3 — e.g. Reply within 30 min", name: "c", widget: "string" }
+
+  - name: "hero_ar"
+    label: "Hero — Arabic"
+    label_singular: "Hero AR"
+    files:
+      - label: "Hero Section (AR)"
+        name: "hero_ar"
+        file: "content/hero/ar.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Headline Line 1", name: "h1a", widget: "string" }
+          - { label: "Headline Line 2", name: "h1b", widget: "string" }
+          - { label: "Lead / Subheadline", name: "lead", widget: "text" }
+          - { label: "Primary CTA Text", name: "primaryCta", widget: "string" }
+          - { label: "Secondary CTA Text", name: "secondaryCta", widget: "string" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - label: "Trust Row"
+            name: "trust"
+            widget: "object"
+            fields:
+              - { label: "Item 1", name: "a", widget: "string" }
+              - { label: "Item 2", name: "b", widget: "string" }
+              - { label: "Item 3", name: "c", widget: "string" }
+
+  # ───────── PRODUCT ─────────
+  - name: "product_en"
+    label: "Product — English"
+    files:
+      - label: "Product (EN)"
+        name: "product_en"
+        file: "content/product/en.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title Line 1", name: "h2a", widget: "string" }
+          - { label: "Title Line 2", name: "h2b", widget: "string" }
+          - { label: "Lead", name: "lead", widget: "text" }
+          - { label: "Viewer Hint", name: "viewerHint", widget: "string", hint: "e.g. Drag to inspect 4 angles" }
+          - label: "Packages"
+            name: "tiers"
+            widget: "list"
+            fields:
+              - { label: "ID (1-bottle / 2-bottles / 3-bottles)", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Price ($)", name: "price", widget: "number", value_type: "int" }
+              - { label: "Original Price (optional)", name: "originalPrice", widget: "number", value_type: "int", required: false }
+              - { label: "Price Per Bottle", name: "pricePerBottle", widget: "number", value_type: "int" }
+              - { label: "Count (1/2/3)", name: "count", widget: "number", value_type: "int" }
+              - { label: "Badge (e.g. Save 10%)", name: "badge", widget: "string", required: false }
+              - { label: "Most Popular?", name: "popular", widget: "boolean", default: false, required: false }
+          - label: "Product Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false }
+          - label: "Ingredients (repeatable)"
+            name: "ingredients"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Amount (e.g. 500 mg)", name: "amount", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+          - label: "How To Use (repeatable)"
+            name: "howTo"
+            widget: "list"
+            fields:
+              - { label: "Step (01/02/03)", name: "step", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Order Button Text", name: "orderTierCta", widget: "string" }
+          - { label: "Guarantee Line", name: "orderGuarantee", widget: "string" }
+
+  - name: "product_ar"
+    label: "Product — Arabic"
+    files:
+      - label: "Product (AR)"
+        name: "product_ar"
+        file: "content/product/ar.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title Line 1", name: "h2a", widget: "string" }
+          - { label: "Title Line 2", name: "h2b", widget: "string" }
+          - { label: "Lead", name: "lead", widget: "text" }
+          - { label: "Viewer Hint", name: "viewerHint", widget: "string" }
+          - label: "Packages"
+            name: "tiers"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Price ($)", name: "price", widget: "number", value_type: "int" }
+              - { label: "Original Price", name: "originalPrice", widget: "number", value_type: "int", required: false }
+              - { label: "Price Per Bottle", name: "pricePerBottle", widget: "number", value_type: "int" }
+              - { label: "Count", name: "count", widget: "number", value_type: "int" }
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - { label: "Most Popular?", name: "popular", widget: "boolean", default: false, required: false }
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt", name: "alt", widget: "string", required: false }
+          - label: "Ingredients"
+            name: "ingredients"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Amount", name: "amount", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+          - label: "How To Use"
+            name: "howTo"
+            widget: "list"
+            fields:
+              - { label: "Step", name: "step", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Order Button", name: "orderTierCta", widget: "string" }
+          - { label: "Guarantee", name: "orderGuarantee", widget: "string" }
+
+  # ───────── TESTIMONIALS ─────────
+  - name: "testimonials_en"
+    label: "Testimonials — English"
+    files:
+      - label: "Testimonials (EN)"
+        name: "testimonials_en"
+        file: "content/testimonials/en.json"
+        fields:
+          - { label: "Section Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - label: "Before/After Images"
+            name: "beforeAfter"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt", name: "alt", widget: "string", required: false }
+          - label: "Reviews (drag to reorder)"
+            name: "reviews"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Quote", name: "text", widget: "text" }
+              - { label: "Stars (1-5)", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }
+              - { label: "Weeks to result", name: "time", widget: "string", hint: "e.g. 8 weeks" }
+              - { label: "Skin concern tag", name: "concern", widget: "string" }
+
+  - name: "testimonials_ar"
+    label: "Testimonials — Arabic"
+    files:
+      - label: "Testimonials (AR)"
+        name: "testimonials_ar"
+        file: "content/testimonials/ar.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - label: "Before/After"
+            name: "beforeAfter"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt", name: "alt", widget: "string", required: false }
+          - label: "Reviews"
+            name: "reviews"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Quote", name: "text", widget: "text" }
+              - { label: "Stars", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }
+              - { label: "Weeks", name: "time", widget: "string" }
+              - { label: "Concern", name: "concern", widget: "string" }
+
+  # ───────── FAQ ─────────
+  - name: "faq_en"
+    label: "FAQ — English"
+    files:
+      - label: "FAQ (EN)"
+        name: "faq_en"
+        file: "content/faq/en.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title Line 1", name: "h2a", widget: "string" }
+          - { label: "Title Line 2", name: "h2b", widget: "string" }
+          - { label: "Lead", name: "lead", widget: "text" }
+          - label: "Questions (drag to reorder)"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - { label: "Footer: Still have questions?", name: "more", widget: "string" }
+          - { label: "Footer CTA", name: "contactAdvisor", widget: "string" }
+
+  - name: "faq_ar"
+    label: "FAQ — Arabic"
+    files:
+      - label: "FAQ (AR)"
+        name: "faq_ar"
+        file: "content/faq/ar.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title Line 1", name: "h2a", widget: "string" }
+          - { label: "Title Line 2", name: "h2b", widget: "string" }
+          - { label: "Lead", name: "lead", widget: "text" }
+          - label: "Questions"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - { label: "Footer", name: "more", widget: "string" }
+          - { label: "CTA", name: "contactAdvisor", widget: "string" }
+
+  # ───────── QUIZ ─────────
+  - name: "quiz_en"
+    label: "Skin Quiz — English"
+    files:
+      - label: "Quiz (EN)"
+        name: "quiz_en"
+        file: "content/quiz/en.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title Line 1", name: "h2a", widget: "string" }
+          - { label: "Title Line 2", name: "h2b", widget: "string" }
+          - { label: "Lead", name: "lead", widget: "text" }
+          - { label: "Start Button", name: "startCta", widget: "string" }
+          - { label: "Progress", name: "progress", widget: "string", hint: "Use {current} and {total}" }
+          - label: "Questions (add/edit/delete)"
+            name: "questions"
+            widget: "list"
+            fields:
+              - { label: "ID (concern/age/routine/timeline)", name: "id", widget: "string" }
+              - { label: "Question Text", name: "text", widget: "string" }
+              - label: "Options"
+                name: "options"
+                widget: "list"
+                fields:
+                  - { label: "Value (no spaces)", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Icon (sun/sparkles/target/droplet/heart)", name: "icon", widget: "string", required: false }
+          - label: "Results"
+            name: "results"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Recommended Package Name", name: "recommendedPackage", widget: "string" }
+              - { label: "Recommended Price", name: "recommendedPrice", widget: "string" }
+              - label: "Routine Steps"
+                name: "routineSummary"
+                widget: "list"
+                fields:
+                  - { label: "Step", name: "step", widget: "string" }
+              - { label: "WhatsApp Button", name: "whatsappCta", widget: "string" }
+              - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  - name: "quiz_ar"
+    label: "Skin Quiz — Arabic"
+    files:
+      - label: "Quiz (AR)"
+        name: "quiz_ar"
+        file: "content/quiz/ar.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title Line 1", name: "h2a", widget: "string" }
+          - { label: "Title Line 2", name: "h2b", widget: "string" }
+          - { label: "Lead", name: "lead", widget: "text" }
+          - { label: "Start Button", name: "startCta", widget: "string" }
+          - { label: "Progress", name: "progress", widget: "string" }
+          - label: "Questions"
+            name: "questions"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Question", name: "text", widget: "string" }
+              - label: "Options"
+                name: "options"
+                widget: "list"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string", required: false }
+          - label: "Results"
+            name: "results"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Package", name: "recommendedPackage", widget: "string" }
+              - { label: "Price", name: "recommendedPrice", widget: "string" }
+              - label: "Steps"
+                name: "routineSummary"
+                widget: "list"
+                fields:
+                  - { label: "Step", name: "step", widget: "string" }
+              - { label: "WhatsApp CTA", name: "whatsappCta", widget: "string" }
+              - { label: "Disclaimer", name: "disclaimer", widget: "text" }

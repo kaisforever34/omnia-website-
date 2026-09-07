@@ -1,0 +1,56 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "Omnia" [ref=e55] [cursor=pointer]:
+      - /url: /en
+    - generic [ref=e6]:
+      - link "Home" [ref=e56] [cursor=pointer]:
+        - /url: /en
+      - link "Product" [ref=e57] [cursor=pointer]:
+        - /url: /en/product
+      - link "About" [ref=e58] [cursor=pointer]:
+        - /url: /en/about
+      - link "FAQ" [ref=e59] [cursor=pointer]:
+        - /url: /en/faq
+    - generic [ref=e11]:
+      - group "Language" [ref=e12]:
+        - button "EN" [active] [pressed] [ref=e13]
+        - button "AR" [ref=e14]
+      - link "Shop" [ref=e60] [cursor=pointer]:
+        - /url: /en/product
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - heading "Beauty that starts within." [level=1] [ref=e61]:
+        - text: Beauty that
+        - text: starts within.
+      - paragraph [ref=e20]: Imagine every skin concern solved with one simple step.
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: "Omnia was born from a simple frustration: skincare that promised everything but delivered nothing, and a market flooded with products that treated the surface while ignoring the root cause of dull, uneven skin."
+        - paragraph [ref=e23]: We believe radiant skin comes from within — not from a twenty step routine or harsh chemicals, but from consistent, gentle nourishment that supports your body's own renewal processes. Glutathione, the body's master antioxidant, is the foundation. Everything else supports it.
+    - generic [ref=e25]:
+      - paragraph [ref=e26]: Why Omnia
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - paragraph [ref=e29]: Carefully sourced
+          - paragraph [ref=e30]: Every ingredient is selected for bioavailability and purity. We source glutathione and collagen from verified suppliers who test for heavy metals and contaminants.
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: Gentle formula
+          - paragraph [ref=e33]: No harsh whitening agents, no irritants. Our formula works with your body's natural processes, not against them. Suitable for sensitive skin types.
+        - generic [ref=e34]:
+          - paragraph [ref=e35]: Visible, not temporary
+          - paragraph [ref=e36]: This isn't a quick fix. Results build gradually as your body's glutathione levels restore — typically noticeable within 4 to 6 weeks of daily use.
+    - img "Deep hydration and skin renewal — Omnia Glutathione" [ref=e39]
+  - contentinfo [ref=e40]:
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - paragraph [ref=e43]: Trusted by over fourteen thousand women
+        - paragraph [ref=e44]: Not an overnight miracle. A daily discipline that shows, skin that looks like it slept well every day.
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: Glutathione
+          - paragraph [ref=e48]: the body's master antioxidant
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: Collagen I & III
+          - paragraph [ref=e51]: firm, bouncy, even tone
+        - generic [ref=e52]:
+          - paragraph [ref=e53]: Vitamins B3 E C
+          - paragraph [ref=e54]: calm, rested radiance

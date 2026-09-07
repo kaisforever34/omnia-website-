@@ -1,0 +1,63 @@
+{
+  "eyebrow": "Personalized Diagnostic",
+  "h2a": "Find your ideal",
+  "h2b": "glow regimen.",
+  "lead": "Answer 4 quick diagnostic questions to receive a tailored routine and special concierge package for your specific skin goals.",
+  "startCta": "Start the 60-second diagnostic",
+  "progress": "Question {current} of {total}",
+  "questions": [
+    {
+      "id": "concern",
+      "text": "What is your primary skin concern?",
+      "options": [
+        { "value": "dullness", "label": "Dullness / uneven tone", "icon": "sun" },
+        { "value": "aging", "label": "Fine lines / loss of firmness", "icon": "sparkles" },
+        { "value": "acne", "label": "Breakouts / post-acne marks", "icon": "target" },
+        { "value": "dryness", "label": "Dryness / dehydrated skin", "icon": "droplet" },
+        { "value": "sensitivity", "label": "Sensitivity / redness", "icon": "heart" }
+      ]
+    },
+    {
+      "id": "age",
+      "text": "What is your age range?",
+      "options": [
+        { "value": "18-25", "label": "18–25" },
+        { "value": "26-35", "label": "26–35" },
+        { "value": "36-45", "label": "36–45" },
+        { "value": "46+", "label": "46+" }
+      ]
+    },
+    {
+      "id": "routine",
+      "text": "How many steps is your current skincare routine?",
+      "options": [
+        { "value": "minimal", "label": "0–2 steps (Cleanser + Moisturizer)" },
+        { "value": "moderate", "label": "3–5 steps (Serum, Eye Cream, SPF)" },
+        { "value": "extensive", "label": "6+ steps (Actives, Masks, Tools)" }
+      ]
+    },
+    {
+      "id": "timeline",
+      "text": "What is your desired goal timeline?",
+      "options": [
+        { "value": "fast", "label": "Fast results (30-day intensive booster)" },
+        { "value": "sustainable", "label": "Sustainable transformation (60–90 days)" },
+        { "value": "lifestyle", "label": "Long-term daily wellness maintenance" }
+      ]
+    }
+  ],
+  "results": {
+    "eyebrow": "Your Recommended Regimen",
+    "title": "Omnia Core Radiance Protocol",
+    "subtitle": "Based on your diagnostic profile, your skin will benefit most from internal glutathione replenishment paired with synergistic collagen.",
+    "recommendedPackage": "2-Month Duo Protocol",
+    "recommendedPrice": "$142 (Save $16)",
+    "routineSummary": [
+      "Morning: 2 Capsules Omnia Glutathione with breakfast",
+      "Hydration: Minimum 2 liters of water daily",
+      "Protection: Daily mineral SPF 30+"
+    ],
+    "whatsappCta": "Send My Routine & Order via WhatsApp",
+    "disclaimer": "Recommendations are tailored for nutritional wellness and not intended as medical diagnosis."
+  }
+}

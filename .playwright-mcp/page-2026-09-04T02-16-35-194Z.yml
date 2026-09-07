@@ -1,0 +1,45 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "أومنيا" [ref=e5] [cursor=pointer]:
+      - /url: /ar
+    - generic [ref=e6]:
+      - link "الرئيسية" [ref=e7] [cursor=pointer]:
+        - /url: /ar
+      - link "المنتج" [ref=e8] [cursor=pointer]:
+        - /url: /ar/product
+      - link "من نحن" [ref=e9] [cursor=pointer]:
+        - /url: /ar/about
+      - link "الأسئلة" [ref=e10] [cursor=pointer]:
+        - /url: /ar/faq
+      - link "اختبار البشرة" [ref=e11] [cursor=pointer]:
+        - /url: /ar/quiz
+    - generic [ref=e12]:
+      - group "Language" [ref=e13]:
+        - button "EN" [ref=e14]
+        - button "AR" [pressed] [ref=e15]
+      - link "تسوّق" [ref=e16] [cursor=pointer]:
+        - /url: /ar/product
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - heading "اكتشفي روتينكِ المثالي." [level=1] [ref=e19]:
+        - text: اكتشفي
+        - text: روتينكِ المثالي.
+      - paragraph [ref=e20]: أجيبي على ٤ أسئلة سريعة. احصلي على روتين مخصّص لأهداف بشرتكِ — دون تخمين.
+      - button "ابدئي الاختبار" [ref=e21]:
+        - text: ابدئي الاختبار
+        - img [ref=e22]
+  - contentinfo [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - paragraph [ref=e27]: يثق بنا أكثر من أربعة عشر ألف امرأة
+        - paragraph [ref=e28]: ليست معجزة بين ليلة وضحاها. التزام يومي يظهر أثره على بشرتك، فتصبح وكأنها نامت نوماً هادئاً كل يوم.
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - paragraph [ref=e31]: الغلوتاثيون
+          - paragraph [ref=e32]: مضاد الأكسدة الرئيسي للجسم
+        - generic [ref=e33]:
+          - paragraph [ref=e34]: كولاجين النوع الأول والثالث
+          - paragraph [ref=e35]: بشرة مشدودة، نضرة، ولونها متجانس
+        - generic [ref=e36]:
+          - paragraph [ref=e37]: فيتامينات B3، E، C
+          - paragraph [ref=e38]: إشراقة هادئة ومسترخية

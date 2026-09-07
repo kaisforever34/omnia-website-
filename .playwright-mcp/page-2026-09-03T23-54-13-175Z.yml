@@ -1,0 +1,56 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "أومنيا" [ref=e5] [cursor=pointer]:
+      - /url: /ar
+    - generic [ref=e6]:
+      - link "الرئيسية" [ref=e7] [cursor=pointer]:
+        - /url: /ar
+      - link "المنتج" [ref=e8] [cursor=pointer]:
+        - /url: /ar/product
+      - link "من نحن" [ref=e9] [cursor=pointer]:
+        - /url: /ar/about
+      - link "الأسئلة" [ref=e10] [cursor=pointer]:
+        - /url: /ar/faq
+    - generic [ref=e11]:
+      - group "Language" [ref=e12]:
+        - button "EN" [ref=e13]
+        - button "AR" [pressed] [ref=e14]
+      - link "تسوّق" [ref=e15] [cursor=pointer]:
+        - /url: /ar/product
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - heading "جمال يبدأ من الداخل." [level=1] [ref=e19]:
+        - text: جمال
+        - text: يبدأ من الداخل.
+      - paragraph [ref=e20]: تخيّلي أن تحلّي كل مشاكل البشرة بخطوة واحدة بسيطة.
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: "وُلدت أومنيا من إحساس بسيط بالإحباط: مستحضرات وعدت بكل شيء ولم تسلّم شيئاً، وسوق مليء بمنتجات تعالج السطح وتتجاهل الجذر الحقيقي للبشرة الباهتة وغير المتجانسة."
+        - paragraph [ref=e23]: نؤمن أن الإشراق الحقيقي يأتي من الداخل — ليس من روتين من عشرين خطوة ولا من مواد كيميائية قاسية، بل من تغذية لطيفة ومستمرة تدعم عمليات التجدد الطبيعية في جسمك. الغلوتاثيون، مضاد الأكسدة الرئيسي في الجسم، هو الأساس. كل شيء آخر يدعمه.
+    - generic [ref=e25]:
+      - paragraph [ref=e26]: لماذا أومنيا
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - paragraph [ref=e29]: مكوّنات مختارة بعناية
+          - paragraph [ref=e30]: كل مكوّن يُختار لتوافره الحيوي ونقائه. نحصّل الغلوتاثيون والكولاجين من موردين معتمدين يفحصون المعادن الثقيلة والملوّثات.
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: تركيبة لطيفة
+          - paragraph [ref=e33]: لا مواد تبييض قاسية، ولا مهيّجات. تركيبتنا تعمل مع طبيعة جسمك لا ضدّها. مناسبة حتى للبشرات الحساسة.
+        - generic [ref=e34]:
+          - paragraph [ref=e35]: نتائج تراكمية لا مؤقتة
+          - paragraph [ref=e36]: ليست حلاً سريعاً. النتائج تتراكم تدريجياً مع عودة مستويات الغلوتاثيون في جسمك — وغالباً تظهر خلال ٤ إلى ٦ أسابيع من الاستخدام اليومي.
+    - img "Deep hydration and skin renewal — Omnia Glutathione" [ref=e39]
+  - contentinfo [ref=e40]:
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - paragraph [ref=e43]: يثق بنا أكثر من أربعة عشر ألف امرأة
+        - paragraph [ref=e44]: ليست معجزة بين ليلة وضحاها. التزام يومي يظهر أثره على بشرتك، فتصبح وكأنها نامت نوماً هادئاً كل يوم.
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: الغلوتاثيون
+          - paragraph [ref=e48]: مضاد الأكسدة الرئيسي للجسم
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: كولاجين النوع الأول والثالث
+          - paragraph [ref=e51]: بشرة مشدودة، نضرة، ولونها متجانس
+        - generic [ref=e52]:
+          - paragraph [ref=e53]: فيتامينات B3، E، C
+          - paragraph [ref=e54]: إشراقة هادئة ومسترخية
