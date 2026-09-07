@@ -1,6 +1,11 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: YOUR_GITHUB_USERNAME/omnia-website
   branch: main
+  # Create this repo on GitHub, then replace YOUR_GITHUB_USERNAME above and push:
+  #   git remote add origin https://github.com/YOUR_GITHUB_USERNAME/omnia-website.git
+  #   git push -u origin main
+  # Then in Decap at /admin you will log in with GitHub (no Netlify Identity needed).
   commit_messages:
     create: "cms: create {{collection}} {{slug}}"
     update: "cms: update {{collection}} {{slug}}"
@@ -12,8 +17,8 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "public/uploads"
 public_folder: "/uploads"
-site_url: "https://omnia.netlify.app"
-display_url: "https://omnia.netlify.app"
+site_url: "https://peaceful-praline-63faf4.netlify.app"
+display_url: "https://peaceful-praline-63faf4.netlify.app"
 logo_url: "/favicon.svg"
 locale: en
 
