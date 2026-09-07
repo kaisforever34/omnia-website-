@@ -54,8 +54,8 @@ export default function ReviewsCarousel() {
   const visibleReviews = reviews.slice(currentIndex, currentIndex + itemsPerView);
 
   return (
-    <section className="px-6 sm:px-10 lg:px-16 pb-20 lg:pb-28" aria-label={t("results.reviewsTitle")}>
-      <div className="max-w-7xl mx-auto space-y-10">
+    <section className="px-6 sm:px-10 lg:px-16 pb-12 lg:pb-16" aria-label={t("results.reviewsTitle")}>
+      <div className="max-w-7xl mx-auto space-y-6">
         <div className="text-center max-w-2xl mx-auto animate-fade-up">
           <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
             {t("results.reviewsTitle")}

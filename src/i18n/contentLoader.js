@@ -12,6 +12,8 @@ import faqEn from "../../content/faq/en.json";
 import faqAr from "../../content/faq/ar.json";
 import quizEn from "../../content/quiz/en.json";
 import quizAr from "../../content/quiz/ar.json";
+import termsEn from "../../content/terms/en.json";
+import termsAr from "../../content/terms/ar.json";
 
 export const contentEn = {
   hero: heroEn,
@@ -32,6 +34,7 @@ export const contentEn = {
   },
   faq: faqEn,
   quiz: quizEn,
+  terms: termsEn,
 };
 
 export const contentAr = {
@@ -53,4 +56,5 @@ export const contentAr = {
   },
   faq: faqAr,
   quiz: quizAr,
+  terms: termsAr,
 };

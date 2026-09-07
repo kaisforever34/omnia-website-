@@ -26,7 +26,7 @@ export const en = {
 
   // WhatsApp Messages & Configuration
   whatsapp: {
-    number: "971569180737",
+    number: "971567710573",
     cta: "Chat on WhatsApp",
     general: "Hi Omnia, I'd like to know more about the Glutathione formula.",
     heroOrder: "Hi Omnia, I'd like to order Omnia L-Glutathione (500mg, 60 capsules — $79). Please share delivery options for [my city].",
@@ -54,6 +54,7 @@ export const en = {
   results: contentEn.results,
   faq: contentEn.faq,
   quiz: contentEn.quiz,
+  terms: contentEn.terms,
 
   // Static problem & why (kept here for simplicity; can be moved to CMS later)
   problem: {
@@ -89,6 +90,7 @@ export const en = {
     sub: "Not an overnight miracle. A calm, daily discipline that shows: skin that looks like it slept well every single day.",
     copyright: "© 2026 Omnia Beautylab. All rights reserved.",
     disclaimer: "These statements have not been evaluated by the FDA or local food authorities. This product is a dietary supplement and is not intended to diagnose, treat, cure, or prevent any disease.",
+    termsLink: "Terms & Conditions",
     items: {
       glutathione: { title: "500mg L-Glutathione", sub: "The body's master antioxidant" },
       collagen: { title: "Collagen I & III", sub: "Restores firmness & bounce" },
@@ -99,18 +101,18 @@ export const en = {
 
 export const ar = {
   // Global & Brand
-  brand: "أومنيا",
+  brand: "امنية",
   orderWhatsApp: "اطلبي عبر واتساب",
   chatWhatsApp: "تحدثي مع أخصائية",
   exploreFormula: "استكشفي التركيبة",
-  shopTheFormula: "اطلبي تركيبة أومنيا",
-  whyOmniaWorks: "لماذا أومنيا فعّالة",
+  shopTheFormula: "اطلبي تركيبة امنية",
+  whyOmniaWorks: "لماذا امنية فعّالة",
   readFormula: "اكتشفي التركيبة",
 
   // Nav
   nav: {
     home: "الرئيسية",
-    about: "عن أومنيا",
+    about: "عن امنية",
     product: "التركيبة",
     results: "النتائج",
     quiz: "اختبار البشرة",
@@ -119,21 +121,21 @@ export const ar = {
 
   // WhatsApp
   whatsapp: {
-    number: "971569180737",
+    number: "971567710573",
     cta: "التواصل عبر واتساب",
-    general: "مرحباً أومنيا، أود معرفة المزيد عن تركيبة مكمل الغلوتاثيون.",
-    heroOrder: "مرحباً أومنيا، أود طلب أومنيا إل-غلوتاثيون (٥٠٠ ملغ، ٦٠ كبسولة — ٧٩$). يرجى مشاركة خيارات التوصيل لمدينتي.",
+    general: "مرحباً امنية، أود معرفة المزيد عن تركيبة مكمل الغلوتاثيون.",
+    heroOrder: "مرحباً امنية، أود طلب امنية جلوتاثيوم (٥٠٠ ملغ، ٦٠ كبسولة — ٧٩$). يرجى مشاركة خيارات التوصيل لمدينتي.",
     tierOrder: (count, price, name) =>
-      `مرحباً أومنيا، أود طلب باقة (${name}) - ${count} عبوة بسعر ${price}$ دولار. يرجى إتمام الطلب.`,
+      `مرحباً امنية، أود طلب باقة (${name}) - ${count} عبوة بسعر ${price}$ دولار. يرجى إتمام الطلب.`,
     quizResult: (concern, age, routineName) =>
-      `مرحباً أومنيا، أكملت اختبار البشرة!\n- المشكلة: ${concern}\n- العمر: ${age}\n- الروتين المقترح: ${routineName}\nأود طلب باقتي المخصصة.`,
-    faqAsk: "مرحباً أومنيا، لدي استفسار حول الشحن وطريقة استخدام التركيبة.",
+      `مرحباً امنية، أكملت اختبار البشرة!\n- المشكلة: ${concern}\n- العمر: ${age}\n- الروتين المقترح: ${routineName}\nأود طلب باقتي المخصصة.`,
+    faqAsk: "مرحباً امنية، لدي استفسار حول الشحن وطريقة استخدام التركيبة.",
   },
 
   // Email capture
   emailCapture: {
     headline: "احصلي على ١٥٪ خصم على طلبكِ الأول",
-    sub: "انضمي إلى ١٤٠٠٠+ امرأة يبدأن يومهن مع أومنيا. بالإضافة إلى: نصائح للبشرة، وصول مبكر، وعروض حصرية.",
+    sub: "انضمي إلى ١٤٠٠٠+ امرأة يبدأن يومهن مع امنية. بالإضافة إلى: نصائح للبشرة، وصول مبكر، وعروض حصرية.",
     placeholder: "أدخلي بريدكِ الإلكتروني",
     button: "احصلي على خصمي",
     privacy: "لا رسائل مزعجة. إلغاء الاشتراك في أي وقت.",
@@ -147,6 +149,7 @@ export const ar = {
   results: contentAr.results,
   faq: contentAr.faq,
   quiz: contentAr.quiz,
+  terms: contentAr.terms,
 
   // Static
   problem: {
@@ -154,11 +157,11 @@ export const ar = {
     h2a: "جمال حقيقي",
     h2b: "يبدأ من الداخل.",
     lead: "معظم مستحضرات العناية تعالج فقط ٠.١ ملم من خلايا الجلد الميتة السطحية بمواد تبييض قاسية وكريمات تزول آثارها في ساعات.",
-    p1: "وُلدت أومنيا من إحباط بسيط: روتين عناية يعد بكل شيء بينما يتجاهل السبب الخلوي الحقيقي للبهتان والتصبغات غير المتجانسة.",
+    p1: "وُلدت امنية من إحباط بسيط: روتين عناية يعد بكل شيء بينما يتجاهل السبب الخلوي الحقيقي للبهتان والتصبغات غير المتجانسة.",
     p2: "عندما تعيدين تغذية جسمكِ بمضاد الأكسدة الرئيسي الغلوتاثيون والكولاجين الحيوي داخلياً، تتجدد دورات البشرة الطبيعية لتحصلي على إشراقة هادئة وحقيقية لا تزول بالغسيل.",
   },
   why: {
-    eyebrow: "لماذا أومنيا فعّالة",
+    eyebrow: "لماذا امنية فعّالة",
     title: "صُممت لنتائج حقيقية ملموسة، بعيداً عن المبالغات",
     items: [
       {
@@ -178,10 +181,11 @@ export const ar = {
   footer: {
     headline: "يثق بنا أكثر من ١٤٠٠٠ امرأة حول العالم",
     sub: "ليست معجزة لحظية، بل التزام يومي هادئ تظهر نتائجه بوضوح: بشرة تبدو وكأنها نامت نوماً عميقاً كل يوم.",
-    copyright: "© ٢٠٢٦ أومنيا بيوتيلاب. جميع الحقوق محفوظة.",
+    copyright: "© ٢٠٢٦ امنية بيوتيلاب. جميع الحقوق محفوظة.",
     disclaimer: "لم تخضع هذه البيانات لتقييم هيئات الغذاء والدواء. هذا المنتج مكمل غذائي وليس مخصصاً لتشخيص أو علاج أو الوقاية من أي مرض.",
+    termsLink: "الشروط والأحكام",
     items: {
-      glutathione: { title: "٥٠٠ ملغ إل-غلوتاثيون", sub: "مضاد الأكسدة الرئيسي للجسم" },
+      glutathione: { title: "٥٠٠ ملغ جلوتاثيوم", sub: "مضاد الأكسدة الرئيسي للجسم" },
       collagen: { title: "كولاجين النوع الأول والثالث", sub: "يستعيد تماسك ومرونة البشرة" },
       vitamins: { title: "فيتامينات C وE وB3", sub: "إشراقة خلوية هادئة ومسترخية" },
     },

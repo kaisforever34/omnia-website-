@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "971569180737";
+export const WHATSAPP_NUMBER = "971567710573";
 
 /**
  * Builds a direct WhatsApp chat URL with properly encoded pre-filled text.
@@ -19,19 +19,19 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
   if (action === "heroOrder") {
     const text =
       lang === "ar"
-        ? "مرحباً أومنيا، أود طلب أومنيا إل-غلوتاثيون (٥٠٠ ملغ، ٦٠ كبسولة — ٧٩$). يرجى مشاركة خيارات التوصيل لمدينتي."
-        : "Hi Omnia, I'd like to order Omnia L-Glutathione (500mg, 60 capsules — $79). Please share delivery options for [my city].";
+        ? "مرحباً امنية، أود طلب امنية جلوتاثيوم (٦٠٠ ملغ، ٥٠ كبسولة — ٩٩ درهم). يرجى مشاركة خيارات التوصيل لمدينتي."
+        : "Hi Omnia, I'd like to order Omnia L-Glutathione (600mg, 50 capsules — 99 AED). Please share delivery options for [my city].";
     return buildWhatsAppUrl(text);
   }
 
   if (action === "tierOrder") {
     const count = data.count || 1;
-    const price = data.price || 79;
-    const name = data.name || (lang === "ar" ? "باقة أومنيا" : "Omnia Package");
+    const price = data.price || 99;
+    const name = data.name || (lang === "ar" ? "باقة امنية" : "Omnia Package");
     const text =
       lang === "ar"
-        ? `مرحباً أومنيا، أود طلب باقة (${name}) - ${count} عبوة بسعر ${price}$ دولار. يرجى إتمام طلبي.`
-        : `Hi Omnia, I would like to order the ${count} Bottle(s) Package (${name}) for $${price}. Please assist with my order.`;
+        ? `مرحباً امنية، أود طلب باقة (${name}) - ${count} عبوة بسعر ${price} درهم. يرجى إتمام طلبي.`
+        : `Hi Omnia, I would like to order the ${count} Bottle(s) Package (${name}) for ${price} AED. Please assist with my order.`;
     return buildWhatsAppUrl(text);
   }
 
@@ -41,7 +41,7 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
     const routine = data.routineTitle || (lang === "ar" ? "بروتوكول الإشراق الخلوي" : "Core Radiance Protocol");
     const text =
       lang === "ar"
-        ? `مرحباً أومنيا، أكملت تشخيص اختبار البشرة!\n- المشكلة: ${concern}\n- الفئة العمرية: ${age}\n- البروتوكول المقترح: ${routine}\nأود طلب باقتي المخصصة عبر الواتساب.`
+        ? `مرحباً امنية، أكملت تشخيص اختبار البشرة!\n- المشكلة: ${concern}\n- الفئة العمرية: ${age}\n- البروتوكول المقترح: ${routine}\nأود طلب باقتي المخصصة عبر الواتساب.`
         : `Hi Omnia, I completed the skin diagnostic!\n- Concern: ${concern}\n- Age: ${age}\n- Recommended: ${routine}\nI'd like to order my personalized regimen.`;
     return buildWhatsAppUrl(text);
   }
@@ -49,7 +49,7 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
   if (action === "faqAsk") {
     const text =
       lang === "ar"
-        ? "مرحباً أومنيا، لدي استفسار حول تركيبة المكمل وطريقة الشحن."
+        ? "مرحباً امنية، لدي استفسار حول تركيبة المكمل وطريقة الشحن."
         : "Hi Omnia, I have a question about the formula and delivery options.";
     return buildWhatsAppUrl(text);
   }
@@ -57,7 +57,7 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
   // Default general inquiry
   const generalText =
     lang === "ar"
-      ? "مرحباً أومنيا! أود معرفة المزيد عن مكمل أومنيا غلوتاثيون."
+      ? "مرحباً امنية! أود معرفة المزيد عن مكمل امنية جلوتاثيوم."
       : "Hi! I'd like to know more about Omnia Glutathione.";
   return buildWhatsAppUrl(generalText);
 }

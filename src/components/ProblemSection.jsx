@@ -40,6 +40,12 @@ export default function ProblemSection() {
             </div>
           </ScrollReveal>
         </div>
+
+        <ScrollReveal delay={300} direction="up">
+          <figure className="mt-10 relative overflow-hidden rounded-2xl border border-ink/10">
+            <img src="/images/gallery/curated-natural-glow.jpg" alt="Natural glow — hook" className="w-full h-auto object-cover max-h-[420px]" loading="lazy" />
+          </figure>
+        </ScrollReveal>
       </div>
     </section>
   );

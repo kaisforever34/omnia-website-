@@ -26,8 +26,8 @@ export default function ProductSection() {
   });
 
   return (
-    <section id="product" className="scroll-mt-24 px-6 sm:px-10 lg:px-16 py-20 lg:py-28 border-t border-ink/10 relative">
-      <div className="max-w-7xl mx-auto space-y-24 lg:space-y-32">
+    <section id="product" className="scroll-mt-24 px-6 sm:px-10 lg:px-16 py-12 lg:py-16 border-t border-ink/10 relative">
+      <div className="max-w-7xl mx-auto space-y-12 lg:space-y-16">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
           <ScrollReveal delay={0} direction="up">
@@ -44,6 +44,13 @@ export default function ProductSection() {
             </p>
           </ScrollReveal>
         </div>
+
+        {/* Hook band — vibrant proof before the viewer */}
+        <ScrollReveal delay={100} direction="up">
+          <figure className="relative overflow-hidden rounded-2xl border border-ink/10 -mx-2 sm:mx-0">
+            <img src="/images/gallery/curated-hook-vibrant.jpg" alt="Vibrant glow hook — Omnia" className="w-full h-auto object-cover max-h-[380px]" loading="lazy" />
+          </figure>
+        </ScrollReveal>
 
         {/* 3D Product Viewer + Order Package Selector */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -115,16 +122,16 @@ export default function ProductSection() {
                     <div className={isRTL ? "text-left" : "text-right"}>
                       <div className="flex items-baseline gap-1.5 justify-end">
                         <span className="font-display text-[22px] sm:text-[26px] text-ink font-medium">
-                          ${tier.price}
+                          {tier.price} {lang === "ar" ? "درهم" : "AED"}
                         </span>
                         {tier.originalPrice && (
                           <span className="font-body text-[13px] text-ink-muted line-through">
-                            ${tier.originalPrice}
+                            {tier.originalPrice} {lang === "ar" ? "درهم" : "AED"}
                           </span>
                         )}
                       </div>
                       <p className="font-body text-[11px] text-champagne font-medium">
-                        ${tier.pricePerBottle} / {lang === "ar" ? "عبوة" : "bottle"}
+                        {tier.pricePerBottle} {lang === "ar" ? "درهم" : "AED"} / {lang === "ar" ? "عبوة" : "bottle"}
                       </p>
                     </div>
                   </button>
@@ -152,7 +159,7 @@ export default function ProductSection() {
 
         {/* Real Ingredients Breakdown */}
         <div className="pt-12 border-t border-ink/10">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-8">
             <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
               {lang === "ar" ? "التركيبة النقية" : "Clean Formulation"}
             </p>
@@ -186,7 +193,7 @@ export default function ProductSection() {
 
         {/* Numbered How to Use Sequence */}
         <div className="pt-12 border-t border-ink/10">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-8">
             <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
               {lang === "ar" ? "إرشادات الاستخدام" : "Daily Protocol"}
             </p>
@@ -213,7 +220,7 @@ export default function ProductSection() {
         </div>
 
         {/* Why Omnia (3 Trust Pillars) */}
-        <div className="p-8 sm:p-12 lg:p-16 bg-white/70 border border-ink/10 rounded-3xl space-y-10">
+        <div className="p-6 sm:p-10 lg:p-12 bg-white/70 border border-ink/10 rounded-3xl space-y-6">
           <div className="text-center max-w-2xl mx-auto">
             <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
               {t("why.eyebrow")}

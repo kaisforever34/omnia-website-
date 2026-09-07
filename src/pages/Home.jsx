@@ -8,6 +8,7 @@ import Gallery from "../components/Gallery";
 import ReviewsCarousel from "../components/ReviewsCarousel";
 import SkinQuizSection from "../components/SkinQuizSection";
 import FAQSection from "../components/FAQSection";
+import TermsSection from "../components/TermsSection";
 import { ScrollReveal, StaggeredReveal, FloatingElement } from "../components/AnimatedElements";
 import { getWhatsAppUrl } from "../utils/whatsapp";
 
@@ -99,6 +100,16 @@ export default function Home() {
                   <span>{t("hero.specs.capsules")} · {t("hero.specs.dosage")} · {t("hero.specs.results")}</span>
                 </div>
               </ScrollReveal>
+
+              {/* Hook strip — 3 visual proofs right under the fold */}
+              <ScrollReveal delay={300} direction="up" duration={700}>
+                <div className="pt-6 flex gap-3">
+                  <img src="/images/gallery/curated-beforeafter-eyes.jpg" alt="Before/after eyes" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="eager" />
+                  <img src="/images/gallery/curated-hook-collage.jpg" alt="Real transformations collage" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="eager" />
+                  <img src="/images/gallery/curated-hand-capsules.jpg" alt="Capsules in hand" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="eager" />
+                </div>
+                <p className="mt-2 font-body text-[11px] tracking-[0.15em] uppercase text-ink/40">Real results — tap to see more ↓</p>
+              </ScrollReveal>
             </div>
 
             {/* Right Product Visual Column */}
@@ -138,9 +149,12 @@ export default function Home() {
 
         {/* ───────────── 6. FAQ ACCORDION (#faq) ───────────── */}
         <FAQSection />
+
+        {/* ───────────── 7. TERMS & CONDITIONS (#terms) ───────────── */}
+        <TermsSection />
       </main>
 
-      {/* ───────────── 7. FOOTER ───────────── */}
+      {/* ───────────── 8. FOOTER ───────────── */}
       <Footer />
     </div>
   );

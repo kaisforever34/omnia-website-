@@ -9,7 +9,7 @@ function FAQItem({ q, a, open, onToggle, isRTL }) {
     <div className="border-b border-ink/10">
       <button
         onClick={onToggle}
-        className={`w-full flex items-center justify-between py-6 text-left min-h-[44px] cursor-pointer ${
+        className={`w-full flex items-center justify-between py-4 text-left min-h-[44px] cursor-pointer ${
           isRTL ? "text-right" : "text-left"
         }`}
         aria-expanded={open}
@@ -54,8 +54,8 @@ export default function FAQSection() {
   const faqWhatsAppUrl = getWhatsAppUrl({ action: "faqAsk", lang });
 
   return (
-    <section id="faq" className="scroll-mt-24 px-6 sm:px-10 lg:px-16 py-20 lg:py-28 border-t border-ink/10 relative">
-      <div className="max-w-4xl mx-auto space-y-12">
+    <section id="faq" className="scroll-mt-24 px-6 sm:px-10 lg:px-16 py-12 lg:py-16 border-t border-ink/10 relative">
+      <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center max-w-2xl mx-auto">
           <ScrollReveal delay={0} direction="up">
             <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-4">

@@ -346,3 +346,40 @@ collections:
                   - { label: "Step", name: "step", widget: "string" }
               - { label: "WhatsApp CTA", name: "whatsappCta", widget: "string" }
               - { label: "Disclaimer", name: "disclaimer", widget: "text" }
+
+  # ───────── TERMS ─────────
+  - name: "terms_en"
+    label: "Terms — English"
+    files:
+      - label: "Terms & Conditions (EN)"
+        name: "terms_en"
+        file: "content/terms/en.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Updated", name: "updated", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+  - name: "terms_ar"
+    label: "Terms — Arabic"
+    files:
+      - label: "Terms & Conditions (AR)"
+        name: "terms_ar"
+        file: "content/terms/ar.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Updated", name: "updated", widget: "string" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }

@@ -40,14 +40,27 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar: Disclaimer & Copyright */}
-        <div className="pt-8 border-t border-ink/10 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left rtl:md:text-right">
-          <p className="font-body text-[12px] text-ink-muted max-w-2xl leading-relaxed">
-            {t("footer.disclaimer")}
-          </p>
-          <p className="font-body text-[12px] text-ink-muted/80 whitespace-nowrap">
-            {t("footer.copyright")}
-          </p>
+        {/* Bottom Bar: Disclaimer, Terms & Copyright */}
+        <div className="pt-8 border-t border-ink/10 flex flex-col gap-4">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-[12px] font-body">
+            <a href="#terms" className="text-ink underline underline-offset-4 decoration-champagne/50 hover:text-champagne transition-colors">
+              {t("footer.termsLink") || "Terms & Conditions"}
+            </a>
+            <span className="text-ink/20">·</span>
+            <span className="text-ink-muted">WhatsApp: +971567710573</span>
+            <span className="text-ink/20">·</span>
+            <a href="mailto:hello@omnia-beautylab.com" className="text-ink-muted hover:text-ink transition-colors">
+              hello@omnia-beautylab.com
+            </a>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left rtl:md:text-right">
+            <p className="font-body text-[12px] text-ink-muted max-w-2xl leading-relaxed">
+              {t("footer.disclaimer")}
+            </p>
+            <p className="font-body text-[12px] text-ink-muted/80 whitespace-nowrap">
+              {t("footer.copyright")}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
