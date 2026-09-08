@@ -11,6 +11,8 @@ backend:
 
 # Draft / preview before publish + git history = undo
 publish_mode: editorial_workflow
+# Local dev with `npx decap-server` -> no login needed on localhost
+local_backend: true
 media_folder: "public/uploads"
 public_folder: "/uploads"
 site_url: "https://peaceful-praline-63faf4.netlify.app"
