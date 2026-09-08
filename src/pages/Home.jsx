@@ -9,6 +9,7 @@ import ReviewsCarousel from "../components/ReviewsCarousel";
 import SkinQuizSection from "../components/SkinQuizSection";
 import FAQSection from "../components/FAQSection";
 import TermsSection from "../components/TermsSection";
+import StickyOrderBar from "../components/StickyOrderBar";
 import { ScrollReveal, StaggeredReveal, FloatingElement } from "../components/AnimatedElements";
 import { getWhatsAppUrl } from "../utils/whatsapp";
 
@@ -37,7 +38,7 @@ export default function Home() {
         <section id="hero" className="px-6 sm:px-10 lg:px-16 pt-8 pb-16 lg:pt-14 lg:pb-24 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-8">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-8">
               <ScrollReveal delay={0} direction="up" duration={700}>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 border border-ink/10 shadow-xs mb-2">
                   <Sparkles size={14} className="text-champagne" aria-hidden="true" />
@@ -46,7 +47,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <h1 className="font-display font-normal leading-[1.02] tracking-[-0.02em] text-[48px] sm:text-[68px] md:text-[80px] lg:text-[88px] xl:text-[96px] text-ink">
+                <h1 className="font-display font-normal leading-[1.02] tracking-[-0.02em] text-[40px] sm:text-[68px] md:text-[80px] lg:text-[88px] xl:text-[96px] text-ink">
                   {t("hero.h1a")}
                   <br />
                   <span className="italic font-normal">{t("hero.h1b")}</span>
@@ -71,9 +72,18 @@ export default function Home() {
                   <span className="font-medium">{t("hero.primaryCta")}</span>
                 </a>
 
+                {/* Mobile: quiet text link so the WhatsApp CTA owns the eye.
+                    sm+: full secondary button as before. */}
                 <button
                   onClick={() => scrollToSection("#product")}
-                  className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 border border-ink/20 text-ink bg-white/40 rounded-xl font-body text-[13px] tracking-[0.08em] uppercase hover:bg-white hover:border-champagne transition-all min-h-[50px] hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                  className="sm:hidden inline-flex items-center gap-1.5 px-2 py-3 font-body text-[13px] tracking-[0.08em] uppercase text-ink-muted underline decoration-champagne decoration-2 underline-offset-8 min-h-[44px] cursor-pointer"
+                >
+                  <span>{t("hero.secondaryCta")}</span>
+                  <ArrowRight size={14} className="rtl:rotate-180" aria-hidden="true" />
+                </button>
+                <button
+                  onClick={() => scrollToSection("#product")}
+                  className="hidden sm:inline-flex group items-center justify-center gap-2.5 px-7 py-4 border border-ink/20 text-ink bg-white/40 rounded-xl font-body text-[13px] tracking-[0.08em] uppercase hover:bg-white hover:border-champagne transition-all min-h-[50px] hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                 >
                   <span>{t("hero.secondaryCta")}</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform rtl:rotate-180 rtl:group-hover:-translate-x-1" />
@@ -103,19 +113,20 @@ export default function Home() {
 
               {/* Hook strip — 3 visual proofs right under the fold */}
               <ScrollReveal delay={300} direction="up" duration={700}>
-                <div className="pt-6 flex gap-3">
-                  <img src="/images/gallery/curated-beforeafter-eyes.jpg" alt="Before/after eyes" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="eager" />
-                  <img src="/images/gallery/curated-hook-collage.jpg" alt="Real transformations collage" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="eager" />
-                  <img src="/images/gallery/curated-hand-capsules.jpg" alt="Capsules in hand" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="eager" />
+                {/* Hook strip — one proof on mobile (diet), three on sm+ */}
+                <div className="pt-4 sm:pt-6 flex gap-3">
+                  <img src="/images/gallery/curated-beforeafter-eyes.jpg" alt="Before/after eyes" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="lazy" />
+                  <img src="/images/gallery/curated-hook-collage.jpg" alt="Real transformations collage" className="hidden sm:block w-24 h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="lazy" />
+                  <img src="/images/gallery/curated-hand-capsules.jpg" alt="Capsules in hand" className="hidden sm:block w-24 h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="lazy" />
                 </div>
-                <p className="mt-2 font-body text-[11px] tracking-[0.15em] uppercase text-ink/40">Real results — tap to see more ↓</p>
+                <p className="hidden sm:block mt-2 font-body text-[11px] tracking-[0.15em] uppercase text-ink/40">Real results — tap to see more ↓</p>
               </ScrollReveal>
             </div>
 
             {/* Right Product Visual Column */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <FloatingElement intensity={8} rotation={0.2}>
-                <div className="relative max-w-[340px] sm:max-w-[420px] lg:max-w-[460px]">
+                <div className="relative max-w-[260px] sm:max-w-[420px] lg:max-w-[460px]">
                   {/* Subtle golden ambient glow */}
                   <div className="absolute inset-0 -z-10 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(185,146,68,0.22)_0%,transparent_75%)] blur-2xl" />
                   
@@ -156,6 +167,8 @@ export default function Home() {
 
       {/* ───────────── 8. FOOTER ───────────── */}
       <Footer />
+      {/* Slim mobile buy bar (fixed) + spacer so it never covers content */}
+      <StickyOrderBar />
     </div>
   );
 }

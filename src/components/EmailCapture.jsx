@@ -4,6 +4,8 @@ import { useI18n } from "../i18n/I18nContext";
 
 const STORAGE_KEY = "omnia-email-captured";
 const MODAL_STORAGE_KEY = "omnia-modal-dismissed";
+const VISITS_KEY = "omnia-visits";
+const INTENT_KEY = "omnia-order-intent";
 
 export default function EmailCapture({ variant = "modal", className = "" }) {
   const { t } = useI18n();
@@ -52,18 +54,48 @@ export default function EmailCapture({ variant = "modal", className = "" }) {
 
   // Hooks must run unconditionally on every render — this effect sits above the
   // `variant === "inline"` early return and no-ops for non-modal variants.
+  // Ad visitors see the modal only on a repeat visit or after showing order
+  // intent (tapping any WhatsApp order link). First-touch buyers are never
+  // interrupted.
+  const isEligibleVisitor = () => {
+    try {
+      const visits = parseInt(localStorage.getItem(VISITS_KEY) || "0", 10);
+      if (visits >= 2) return true;
+      return localStorage.getItem(INTENT_KEY) === "true";
+    } catch {
+      return false;
+    }
+  };
+
+  useEffect(() => {
+    if (variant !== "modal") return;
+    // Count visits + record order intent for future eligibility checks.
+    try {
+      const visits = parseInt(localStorage.getItem(VISITS_KEY) || "0", 10);
+      localStorage.setItem(VISITS_KEY, String(visits + 1));
+    } catch {}
+    const markIntent = (e) => {
+      const a = e.target?.closest?.('a[href*="wa.me"]');
+      if (a) {
+        try { localStorage.setItem(INTENT_KEY, "true"); } catch {}
+      }
+    };
+    document.addEventListener("click", markIntent);
+    return () => document.removeEventListener("click", markIntent);
+  }, [variant]);
+
   useEffect(() => {
     if (variant !== "modal") return;
     try {
       const dismissed = localStorage.getItem(MODAL_STORAGE_KEY);
-      if (!dismissed && !isSubmitted()) {
+      if (!dismissed && !isSubmitted() && isEligibleVisitor()) {
         const timer = setTimeout(() => setShowModal(true), 30000);
         return () => clearTimeout(timer);
       }
     } catch {}
 
     const handleMouseLeave = (e) => {
-      if (e.clientY <= 0 && !isSubmitted()) {
+      if (e.clientY <= 0 && !isSubmitted() && isEligibleVisitor()) {
         try {
           const dismissed = localStorage.getItem(MODAL_STORAGE_KEY);
           if (!dismissed) setShowModal(true);
