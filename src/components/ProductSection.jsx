@@ -21,7 +21,7 @@ export default function ProductSection() {
     data: {
       count: selectedTier.count || 1,
       price: selectedTier.price || 79,
-      name: selectedTier.name || "Omnia Glutathione",
+      name: selectedTier.name || "OmniaGlow Glutathione",
     },
   });
 
@@ -48,7 +48,7 @@ export default function ProductSection() {
         {/* Hook band — vibrant proof before the viewer */}
         <ScrollReveal delay={100} direction="up">
           <figure className="relative overflow-hidden rounded-2xl border border-ink/10 -mx-2 sm:mx-0">
-            <img src="/images/gallery/curated-hook-vibrant.jpg" alt="Vibrant glow hook — Omnia" className="w-full h-auto object-cover max-h-[380px]" loading="lazy" />
+            <img src="/images/gallery/curated-hook-vibrant.jpg" alt="Vibrant glow hook — OmniaGlow" className="w-full h-auto object-cover max-h-[380px]" loading="lazy" />
           </figure>
         </ScrollReveal>
 
@@ -79,11 +79,29 @@ export default function ProductSection() {
             <div className="space-y-3.5" role="radiogroup" aria-label={t("product.packagesTitle")}>
               {tiers.map((tier) => {
                 const isSelected = tier.id === selectedTierId;
+                // Each card carries its own order link with this tier baked in,
+                // so the WhatsApp message can never mismatch the package.
+                const cardOrderUrl = getWhatsAppUrl({
+                  action: "tierOrder",
+                  lang,
+                  data: {
+                    count: tier.count || 1,
+                    price: tier.price || 99,
+                    name: tier.name || "OmniaGlow Glutathione",
+                  },
+                });
                 return (
-                  <button
+                  <div
                     key={tier.id}
                     onClick={() => setSelectedTierId(tier.id)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setSelectedTierId(tier.id);
+                      }
+                    }}
                     role="radio"
+                    tabIndex={0}
                     aria-checked={isSelected}
                     className={`w-full relative p-5 rounded-2xl border transition-all duration-200 text-left flex items-center justify-between gap-4 cursor-pointer min-h-[72px] ${
                       isSelected
@@ -133,8 +151,18 @@ export default function ProductSection() {
                       <p className="font-body text-[11px] text-champagne font-medium">
                         {tier.pricePerBottle} {lang === "ar" ? "درهم" : "AED"} / {lang === "ar" ? "عبوة" : "bottle"}
                       </p>
+                      <a
+                        href={cardOrderUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 mt-1 font-body text-[12px] font-medium text-ink underline decoration-champagne decoration-2 underline-offset-4 hover:text-champagne transition-colors min-h-[32px]"
+                      >
+                        {t("orderThisPackage")}
+                        <span aria-hidden="true">{isRTL ? "←" : "→"}</span>
+                      </a>
                     </div>
-                  </button>
+                  </div>
                 );
               })}
             </div>
@@ -219,7 +247,7 @@ export default function ProductSection() {
           </div>
         </div>
 
-        {/* Why Omnia (3 Trust Pillars) */}
+        {/* Why OmniaGlow (3 Trust Pillars) */}
         <div className="p-6 sm:p-10 lg:p-12 bg-white/70 border border-ink/10 rounded-3xl space-y-6">
           <div className="text-center max-w-2xl mx-auto">
             <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">

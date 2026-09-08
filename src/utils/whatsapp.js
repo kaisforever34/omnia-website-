@@ -1,3 +1,6 @@
+// TO CHANGE THE WHATSAPP NUMBER LATER: replace the digits below with your real
+// UAE number in international format WITHOUT "+" (e.g. "9715XXXXXXXX").
+// Every "Order via WhatsApp" button + the floating chat icon use this one constant.
 export const WHATSAPP_NUMBER = "971567710573";
 
 /**
@@ -20,18 +23,18 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
     const text =
       lang === "ar"
         ? "مرحباً امنية، أود طلب امنية جلوتاثيوم (٦٠٠ ملغ، ٥٠ كبسولة — ٩٩ درهم). يرجى مشاركة خيارات التوصيل لمدينتي."
-        : "Hi Omnia, I'd like to order Omnia L-Glutathione (600mg, 50 capsules — 99 AED). Please share delivery options for [my city].";
+        : "Hi OmniaGlow, I'd like to order OmniaGlow L-Glutathione (600mg, 50 capsules — 99 AED). Please share delivery options for [my city].";
     return buildWhatsAppUrl(text);
   }
 
   if (action === "tierOrder") {
     const count = data.count || 1;
     const price = data.price || 99;
-    const name = data.name || (lang === "ar" ? "باقة امنية" : "Omnia Package");
+    const name = data.name || (lang === "ar" ? "باقة امنية" : "OmniaGlow Package");
     const text =
       lang === "ar"
         ? `مرحباً امنية، أود طلب باقة (${name}) - ${count} عبوة بسعر ${price} درهم. يرجى إتمام طلبي.`
-        : `Hi Omnia, I would like to order the ${count} Bottle(s) Package (${name}) for ${price} AED. Please assist with my order.`;
+        : `Hi OmniaGlow, I would like to order the ${count} Bottle(s) Package (${name}) for ${price} AED. Please assist with my order.`;
     return buildWhatsAppUrl(text);
   }
 
@@ -42,7 +45,7 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
     const text =
       lang === "ar"
         ? `مرحباً امنية، أكملت تشخيص اختبار البشرة!\n- المشكلة: ${concern}\n- الفئة العمرية: ${age}\n- البروتوكول المقترح: ${routine}\nأود طلب باقتي المخصصة عبر الواتساب.`
-        : `Hi Omnia, I completed the skin diagnostic!\n- Concern: ${concern}\n- Age: ${age}\n- Recommended: ${routine}\nI'd like to order my personalized regimen.`;
+        : `Hi OmniaGlow, I completed the skin diagnostic!\n- Concern: ${concern}\n- Age: ${age}\n- Recommended: ${routine}\nI'd like to order my personalized regimen.`;
     return buildWhatsAppUrl(text);
   }
 
@@ -50,7 +53,7 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
     const text =
       lang === "ar"
         ? "مرحباً امنية، لدي استفسار حول تركيبة المكمل وطريقة الشحن."
-        : "Hi Omnia, I have a question about the formula and delivery options.";
+        : "Hi OmniaGlow, I have a question about the formula and delivery options.";
     return buildWhatsAppUrl(text);
   }
 
@@ -58,6 +61,6 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
   const generalText =
     lang === "ar"
       ? "مرحباً امنية! أود معرفة المزيد عن مكمل امنية جلوتاثيوم."
-      : "Hi! I'd like to know more about Omnia Glutathione.";
+      : "Hi! I'd like to know more about OmniaGlow Glutathione.";
   return buildWhatsAppUrl(generalText);
 }

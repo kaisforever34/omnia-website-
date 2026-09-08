@@ -1,4 +1,4 @@
-// All translatable strings for the Omnia Single-Page experience.
+// All translatable strings for the OmniaGlow Single-Page experience.
 // CMS-editable sections (hero/product/results/faq/quiz) are loaded from /content/* via Decap.
 // Static globals (brand/nav/whatsapp/problem/why/footer) remain here.
 
@@ -6,12 +6,13 @@ import { contentEn, contentAr } from "./contentLoader.js";
 
 export const en = {
   // Global & Brand
-  brand: "Omnia",
+  brand: "OmniaGlow",
   orderWhatsApp: "Order via WhatsApp",
   chatWhatsApp: "Chat with Advisor",
   exploreFormula: "Explore the formula",
-  shopTheFormula: "Order Omnia formula",
-  whyOmniaWorks: "Why Omnia works",
+  shopTheFormula: "Order OmniaGlow formula",
+  orderThisPackage: "Order this package",
+  whyOmniaWorks: "Why OmniaGlow works",
   readFormula: "Read the formula",
 
   // Nav (Single-page anchors)
@@ -25,22 +26,25 @@ export const en = {
   },
 
   // WhatsApp Messages & Configuration
+  // TO CHANGE THE WHATSAPP NUMBER LATER: replace the digits in `number` below
+  // with your real UAE number WITHOUT "+" (e.g. "9715XXXXXXXX"). This mirrors
+  // WHATSAPP_NUMBER in src/utils/whatsapp.js — keep both in sync.
   whatsapp: {
     number: "971567710573",
     cta: "Chat on WhatsApp",
-    general: "Hi Omnia, I'd like to know more about the Glutathione formula.",
-    heroOrder: "Hi Omnia, I'd like to order Omnia L-Glutathione (500mg, 60 capsules — $79). Please share delivery options for [my city].",
+    general: "Hi OmniaGlow, I'd like to know more about the Glutathione formula.",
+    heroOrder: "Hi OmniaGlow, I'd like to order OmniaGlow L-Glutathione (500mg, 60 capsules — $79). Please share delivery options for [my city].",
     tierOrder: (count, price, name) =>
-      `Hi Omnia, I would like to order the ${count} Bottle(s) Package (${name}) for $${price}. Please assist with my order.`,
+      `Hi OmniaGlow, I would like to order the ${count} Bottle(s) Package (${name}) for $${price}. Please assist with my order.`,
     quizResult: (concern, age, routineName) =>
-      `Hi Omnia, I completed the skin quiz!\n- Concern: ${concern}\n- Age: ${age}\n- Recommended: ${routineName}\nI would like to order my personalized routine.`,
-    faqAsk: "Hi Omnia, I have a question about shipping and taking the formula.",
+      `Hi OmniaGlow, I completed the skin quiz!\n- Concern: ${concern}\n- Age: ${age}\n- Recommended: ${routineName}\nI would like to order my personalized routine.`,
+    faqAsk: "Hi OmniaGlow, I have a question about shipping and taking the formula.",
   },
 
   // Email capture
   emailCapture: {
     headline: "Get 15% off your first order",
-    sub: "Join 14,000+ women who start their day with Omnia. Plus: skin tips, early access, and exclusive offers.",
+    sub: "Join 14,000+ women who start their day with OmniaGlow. Plus: skin tips, early access, and exclusive offers.",
     placeholder: "Enter your email",
     button: "Unlock my discount",
     privacy: "No spam. Unsubscribe anytime.",
@@ -62,11 +66,11 @@ export const en = {
     h2a: "Beauty that truly",
     h2b: "starts within.",
     lead: "Most skincare treats only the outer 0.1mm of dead skin cells with harsh bleaches and heavy creams that wear off in hours.",
-    p1: "Omnia was created from a simple frustration: skincare routines that promise everything while ignoring the cellular root cause of dullness and pigmentation.",
+    p1: "OmniaGlow was created from a simple frustration: skincare routines that promise everything while ignoring the cellular root cause of dullness and pigmentation.",
     p2: "When you replenish master antioxidant glutathione and bioactive collagen internally, your body's natural renewal cycles activate. The result is real, rested radiance that doesn't wash off.",
   },
   why: {
-    eyebrow: "Why Omnia works",
+    eyebrow: "Why OmniaGlow works",
     title: "Designed for real results, not marketing hype",
     items: [
       {
@@ -88,7 +92,7 @@ export const en = {
   footer: {
     headline: "Trusted by over 14,000 women worldwide",
     sub: "Not an overnight miracle. A calm, daily discipline that shows: skin that looks like it slept well every single day.",
-    copyright: "© 2026 Omnia Beautylab. All rights reserved.",
+    copyright: "© 2026 OmniaGlow Beautylab. All rights reserved.",
     disclaimer: "These statements have not been evaluated by the FDA or local food authorities. This product is a dietary supplement and is not intended to diagnose, treat, cure, or prevent any disease.",
     termsLink: "Terms & Conditions",
     items: {
@@ -106,6 +110,7 @@ export const ar = {
   chatWhatsApp: "تحدثي مع أخصائية",
   exploreFormula: "استكشفي التركيبة",
   shopTheFormula: "اطلبي تركيبة امنية",
+  orderThisPackage: "اطلبي هذه الباقة",
   whyOmniaWorks: "لماذا امنية فعّالة",
   readFormula: "اكتشفي التركيبة",
 

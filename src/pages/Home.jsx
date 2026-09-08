@@ -121,7 +121,7 @@ export default function Home() {
                   
                   <img
                     src="/product/front.png"
-                    alt="Omnia Glutathione Supplement Bottle"
+                    alt="OmniaGlow Glutathione Supplement Bottle"
                     className="w-full h-auto object-contain drop-shadow-[0_45px_70px_rgba(33,29,24,0.25)]"
                     loading="eager"
                   />

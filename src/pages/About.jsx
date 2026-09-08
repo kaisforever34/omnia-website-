@@ -64,7 +64,7 @@ export default function About() {
           <div className="animate-fade-up">
             <img
               src="/images/gallery/infographic-whitening.jpg"
-              alt="Deep hydration and skin renewal — Omnia Glutathione"
+              alt="Deep hydration and skin renewal — OmniaGlow Glutathione"
               className="w-full h-auto object-cover"
               loading="lazy"
             />

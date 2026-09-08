@@ -38,7 +38,7 @@ export default function Gallery() {
           <figure className="relative overflow-hidden bg-cream/40 border border-ink/10 rounded-2xl max-h-[520px] lg:max-h-[600px]">
             <ParallaxImage
               src="/images/gallery/curated-beforeafter-eyes.jpg"
-              alt="Before and after — visible reduction in fine lines after consistent Omnia use"
+              alt="Before and after — visible reduction in fine lines after consistent OmniaGlow use"
               className="w-full h-full object-cover"
               speed={0.15}
               loading="lazy"
@@ -77,7 +77,7 @@ export default function Gallery() {
           <figure className="relative mt-12 lg:mt-16 max-w-sm mx-auto">
             <ParallaxImage
               src="/images/gallery/testimonial-7days.jpg"
-              alt="Seven days to brighter skin with Omnia"
+              alt="Seven days to brighter skin with OmniaGlow"
               className="w-full h-auto object-cover"
               wrapperClassName="rounded-2xl shadow-sm"
               speed={0.1}
@@ -98,7 +98,7 @@ export default function Gallery() {
           <figure className="relative overflow-hidden bg-cream/40 border border-ink/10 rounded-2xl h-[360px] sm:h-[400px] lg:h-[460px]">
             <ParallaxImage
               src="/images/gallery/lifestyle-bottle.jpg"
-              alt="Woman smiling with the Omnia Glutathione bottle"
+              alt="Woman smiling with the OmniaGlow Glutathione bottle"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
               speed={0.08}
               loading="lazy"
@@ -107,7 +107,7 @@ export default function Gallery() {
           <figure className="relative overflow-hidden bg-cream/40 border border-ink/10 rounded-2xl h-[360px] sm:h-[400px] lg:h-[460px]">
             <ParallaxImage
               src="/images/gallery/curated-hand-capsules.jpg"
-              alt="Premium Omnia capsules — 50 capsules of L-Glutathione and Vitamins"
+              alt="Premium OmniaGlow capsules — 50 capsules of L-Glutathione and Vitamins"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
               speed={0.08}
               loading="lazy"
@@ -136,7 +136,7 @@ export default function Gallery() {
           <figure className="relative overflow-hidden rounded-2xl bg-cream/40 border border-ink/10">
             <img
               src="/images/gallery/curated-natural-glow.jpg"
-              alt="Your Natural Glow — Omnia"
+              alt="Your Natural Glow — OmniaGlow"
               className="w-full h-auto object-cover"
               loading="lazy"
             />
@@ -161,7 +161,7 @@ export default function Gallery() {
             <figure className="relative overflow-hidden rounded-2xl bg-cream/40 border border-ink/10">
               <img
                 src="/images/gallery/curated-hook-collage.jpg"
-                alt="Multiple before and after transformations with Omnia"
+                alt="Multiple before and after transformations with OmniaGlow"
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />
@@ -171,7 +171,7 @@ export default function Gallery() {
             <figure className="relative overflow-hidden rounded-2xl bg-cream/40 border border-ink/10">
               <img
                 src="/images/gallery/curated-hook-vibrant.jpg"
-                alt="Omnia with natural ingredients — vibrant glow"
+                alt="OmniaGlow with natural ingredients — vibrant glow"
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />

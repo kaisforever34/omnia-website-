@@ -40,7 +40,7 @@ export default function Product() {
                 <FloatingElement intensity={8} rotation={0.3}>
                   <ParallaxImage
                     src="/images/gallery/product-bottle.jpg"
-                    alt="Omnia Glutathione bottle on desk"
+                    alt="OmniaGlow Glutathione bottle on desk"
                     className="w-full max-w-[360px] lg:max-w-none lg:max-w-[480px] h-auto object-contain drop-shadow-[0_50px_70px_rgba(33,29,24,0.18)]"
                     speed={0.15}
                     loading="eager"

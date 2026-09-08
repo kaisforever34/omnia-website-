@@ -11,7 +11,7 @@ export class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error("Omnia ErrorBoundary caught:", error, errorInfo);
+    console.error("OmniaGlow ErrorBoundary caught:", error, errorInfo);
   }
 
   render() {

@@ -6,20 +6,20 @@ const STORAGE_KEY = "omnia-email-captured";
 const MODAL_STORAGE_KEY = "omnia-modal-dismissed";
 
 export default function EmailCapture({ variant = "modal", className = "" }) {
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const ec = t("emailCapture");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const isSubmitted = () => {
+  const isSubmitted = useCallback(() => {
     try {
       return localStorage.getItem(STORAGE_KEY) === email.toLowerCase();
     } catch {
       return false;
     }
-  };
+  }, [email]);
 
   const markSubmitted = (e) => {
     try {
@@ -49,6 +49,31 @@ export default function EmailCapture({ variant = "modal", className = "" }) {
       setError("Something went wrong. Please try again.");
     }
   };
+
+  // Hooks must run unconditionally on every render — this effect sits above the
+  // `variant === "inline"` early return and no-ops for non-modal variants.
+  useEffect(() => {
+    if (variant !== "modal") return;
+    try {
+      const dismissed = localStorage.getItem(MODAL_STORAGE_KEY);
+      if (!dismissed && !isSubmitted()) {
+        const timer = setTimeout(() => setShowModal(true), 30000);
+        return () => clearTimeout(timer);
+      }
+    } catch {}
+
+    const handleMouseLeave = (e) => {
+      if (e.clientY <= 0 && !isSubmitted()) {
+        try {
+          const dismissed = localStorage.getItem(MODAL_STORAGE_KEY);
+          if (!dismissed) setShowModal(true);
+        } catch {}
+      }
+    };
+
+    document.addEventListener("mouseleave", handleMouseLeave);
+    return () => document.removeEventListener("mouseleave", handleMouseLeave);
+  }, [variant, isSubmitted]);
 
   if (variant === "inline") {
     const alreadySubscribed = isSubmitted();
@@ -111,29 +136,6 @@ export default function EmailCapture({ variant = "modal", className = "" }) {
       </div>
     );
   }
-
-  useEffect(() => {
-    if (variant !== "modal") return;
-    try {
-      const dismissed = localStorage.getItem(MODAL_STORAGE_KEY);
-      if (!dismissed && !isSubmitted()) {
-        const timer = setTimeout(() => setShowModal(true), 30000);
-        return () => clearTimeout(timer);
-      }
-    } catch {}
-
-    const handleMouseLeave = (e) => {
-      if (e.clientY <= 0 && !isSubmitted()) {
-        try {
-          const dismissed = localStorage.getItem(MODAL_STORAGE_KEY);
-          if (!dismissed) setShowModal(true);
-        } catch {}
-      }
-    };
-
-    document.addEventListener("mouseleave", handleMouseLeave);
-    return () => document.removeEventListener("mouseleave", handleMouseLeave);
-  }, [variant]);
 
   if (!showModal || variant !== "modal") return null;
 

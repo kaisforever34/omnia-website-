@@ -15,8 +15,8 @@ publish_mode: editorial_workflow
 local_backend: true
 media_folder: "public/uploads"
 public_folder: "/uploads"
-site_url: "https://peaceful-praline-63faf4.netlify.app"
-display_url: "https://peaceful-praline-63faf4.netlify.app"
+site_url: "https://omniaglow.netlify.app"
+display_url: "https://omniaglow.netlify.app"
 logo_url: "/favicon.svg"
 locale: en
 
@@ -117,6 +117,7 @@ collections:
               - { label: "Description", name: "desc", widget: "text" }
           - { label: "Order Button Text", name: "orderTierCta", widget: "string" }
           - { label: "Guarantee Line", name: "orderGuarantee", widget: "string" }
+          - { label: "Shipping Note", name: "shipping", widget: "string", hint: "e.g. Cash on Delivery Available Across UAE" }
 
   - name: "product_ar"
     label: "Product — Arabic"
@@ -165,6 +166,7 @@ collections:
               - { label: "Description", name: "desc", widget: "text" }
           - { label: "Order Button", name: "orderTierCta", widget: "string" }
           - { label: "Guarantee", name: "orderGuarantee", widget: "string" }
+          - { label: "Shipping Note", name: "shipping", widget: "string" }
 
   # ───────── TESTIMONIALS ─────────
   - name: "testimonials_en"

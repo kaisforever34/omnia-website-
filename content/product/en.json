@@ -39,7 +39,7 @@
     }
   ],
   "images": [
-    { "src": "/product/front.png", "alt": "Omnia Front" },
+    { "src": "/product/front.png", "alt": "OmniaGlow Front" },
     { "src": "/product/right.png", "alt": "Right view" }
   ],
   "ingredients": [
@@ -55,5 +55,6 @@
     { "step": "03", "title": "Cumulative Transformation", "desc": "Week 1–2 boosts hydration and clarity. Weeks 4–6 reveal noticeable evening of tone and dark mark reduction. Store in a cool, dry place. Do not exceed dose." }
   ],
   "orderTierCta": "Order this package via WhatsApp",
-  "orderGuarantee": "Delivery in 2 days · Cash on Delivery · GCC Compliant 100% · GMP Certified"
+  "orderGuarantee": "Delivery in 2 days · Cash on Delivery Available Across UAE · GCC Compliant 100% · GMP Certified",
+  "shipping": "Cash on Delivery Available Across UAE · Delivery in 2 days"
 }

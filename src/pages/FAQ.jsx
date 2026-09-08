@@ -57,7 +57,7 @@ export default function FAQ() {
             <figure className="animate-fade-up">
               <img
                 src="/images/gallery/infographic-tips.jpg"
-                alt="Three skincare tips from Omnia Beautylab"
+                alt="Three skincare tips from OmniaGlow Beautylab"
                 className="w-full h-auto object-cover"
                 loading="eager"
               />
