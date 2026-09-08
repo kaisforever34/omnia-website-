@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import ProblemSection from "../components/ProblemSection";
 import ProductSection from "../components/ProductSection";
 import Gallery from "../components/Gallery";
+import VideoAd from "../components/VideoAd";
 import ReviewsCarousel from "../components/ReviewsCarousel";
 import SkinQuizSection from "../components/SkinQuizSection";
 import FAQSection from "../components/FAQSection";
@@ -153,6 +154,8 @@ export default function Home() {
 
         {/* ───────────── 4. SOCIAL PROOF & TESTIMONIALS (#results) ───────────── */}
         <Gallery />
+        {/* ───────────── 4b. CUSTOMER STORY VIDEO ───────────── */}
+        <VideoAd />
         <ReviewsCarousel />
 
         {/* ───────────── 5. IN-PAGE SKIN DIAGNOSTIC QUIZ (#quiz) ───────────── */}

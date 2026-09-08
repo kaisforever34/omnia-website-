@@ -52,6 +52,12 @@ export const en = {
     alreadySubscribed: "You're already on the list!",
   },
 
+  // Customer story video
+  videoAdBadge: "Watch her story",
+  videoAdTitle: "From dull mirror to daily confidence",
+  videoAdLead: "Spots, dullness, lost glow — then one daily ritual. Watch the 15-second story our customers send to their sisters.",
+  videoAdNote: "99 AED · Cash on Delivery Available Across UAE",
+
   // CMS-driven sections
   hero: contentEn.hero,
   product: contentEn.product,
@@ -147,6 +153,12 @@ export const ar = {
     success: "شكراً! تفقدي بريدكِ للحصول على الكود.",
     alreadySubscribed: "أنتِ مسجلة مسبقاً!",
   },
+
+  // Customer story video
+  videoAdBadge: "شاهدي قصتها",
+  videoAdTitle: "من مرآة باهتة إلى ثقة يومية",
+  videoAdLead: "تصبغات وبهتان ونضارة مفقودة — ثم طقس يومي واحد. شاهدي قصة الـ١٥ ثانية التي ترسلها عميلاتنا لأخواتهن.",
+  videoAdNote: "٩٩ درهم · الدفع عند الاستلام متوفر في جميع أنحاء الإمارات",
 
   // CMS-driven
   hero: contentAr.hero,
