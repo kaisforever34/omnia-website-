@@ -63,7 +63,7 @@ export default function StickyOrderBar() {
             target="_blank"
             rel="noopener noreferrer"
             tabIndex={visible ? 0 : -1}
-            className="inline-flex shrink-0 items-center gap-2 px-6 py-3 rounded-xl bg-champagne text-ink font-body text-[13px] tracking-[0.06em] uppercase font-medium min-h-[48px] active:scale-[0.98]"
+            className="inline-flex shrink-0 items-center gap-2 px-6 py-3 rounded-xl bg-cream text-ink font-body text-[13px] tracking-[0.06em] uppercase font-medium min-h-[48px] hover:bg-white active:scale-[0.98]"
           >
             <MessageCircle size={16} aria-hidden="true" />
             <span>{t("orderWhatsApp")}</span>

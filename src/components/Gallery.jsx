@@ -21,7 +21,7 @@ export default function Gallery() {
         <ScrollReveal delay={0} direction="up">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
             <div>
-              <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
+              <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-3">
                 {t("results.eyebrow")}
               </p>
               <h2 className="font-display text-[32px] sm:text-[44px] lg:text-[56px] leading-[1.05] tracking-[-0.01em] text-ink max-w-xl">
@@ -51,7 +51,7 @@ export default function Gallery() {
       <section className="px-6 sm:px-10 lg:px-16 py-12 lg:py-16">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal delay={0} direction="up">
-            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-5">
+            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-5">
               {t("results.shift7Title")}
             </p>
             <p className="font-display text-[26px] sm:text-[34px] lg:text-[42px] leading-[1.2] text-ink">
@@ -148,11 +148,11 @@ export default function Gallery() {
       <section className="px-6 sm:px-10 lg:px-16 pb-10 lg:pb-12">
         <ScrollReveal delay={0} direction="up">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
+            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-3">
               {t("results.eyebrow")}
             </p>
             <h3 className="font-display text-[28px] sm:text-[36px] leading-[1.1] text-ink">
-              Real transformations, real women
+              {t("results.realTransformTitle")}
             </h3>
           </div>
         </ScrollReveal>

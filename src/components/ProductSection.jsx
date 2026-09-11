@@ -8,7 +8,7 @@ import { getWhatsAppUrl } from "../utils/whatsapp";
 export default function ProductSection() {
   const { t, lang, isRTL } = useI18n();
   const tiers = t("product.tiers") || [];
-  const [selectedTierId, setSelectedTierId] = useState("2-bottles");
+  const [selectedTierId, setSelectedTierId] = useState("1-bottle");
 
   const selectedTier = tiers.find((t) => t.id === selectedTierId) || tiers[0] || {};
   const ingredients = t("product.ingredients") || [];
@@ -20,7 +20,7 @@ export default function ProductSection() {
     lang,
     data: {
       count: selectedTier.count || 1,
-      price: selectedTier.price || 79,
+      price: selectedTier.price || 99,
       name: selectedTier.name || "OmniaGlow Glutathione",
     },
   });
@@ -31,7 +31,7 @@ export default function ProductSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
           <ScrollReveal delay={0} direction="up">
-            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-4">
+            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-4">
               {t("product.eyebrow")}
             </p>
             <h2 className="font-display font-normal leading-[1.05] tracking-[-0.02em] text-[36px] sm:text-[48px] lg:text-[60px] text-ink">
@@ -44,13 +44,6 @@ export default function ProductSection() {
             </p>
           </ScrollReveal>
         </div>
-
-        {/* Hook band — vibrant proof before the viewer */}
-        <ScrollReveal delay={100} direction="up">
-          <figure className="relative overflow-hidden rounded-2xl border border-ink/10 -mx-2 sm:mx-0">
-            <img src="/images/gallery/curated-hook-vibrant.jpg" alt="Vibrant glow hook — OmniaGlow" className="w-full h-auto object-cover max-h-[380px]" loading="lazy" />
-          </figure>
-        </ScrollReveal>
 
         {/* 3D Product Viewer + Order Package Selector */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -67,7 +60,7 @@ export default function ProductSection() {
           {/* Right Column: Package Selector & Concierge Checkout */}
           <div className="lg:col-span-6 space-y-6">
             <div>
-              <p className="font-body text-[13px] tracking-[0.25em] uppercase text-champagne mb-2">
+              <p className="font-body text-[13px] tracking-[0.25em] uppercase text-champagne-deep mb-2">
                 {t("product.packagesTitle")}
               </p>
               <p className="font-body text-[14px] text-ink-muted">
@@ -79,17 +72,6 @@ export default function ProductSection() {
             <div className="space-y-3.5" role="radiogroup" aria-label={t("product.packagesTitle")}>
               {tiers.map((tier) => {
                 const isSelected = tier.id === selectedTierId;
-                // Each card carries its own order link with this tier baked in,
-                // so the WhatsApp message can never mismatch the package.
-                const cardOrderUrl = getWhatsAppUrl({
-                  action: "tierOrder",
-                  lang,
-                  data: {
-                    count: tier.count || 1,
-                    price: tier.price || 99,
-                    name: tier.name || "OmniaGlow Glutathione",
-                  },
-                });
                 return (
                   <div
                     key={tier.id}
@@ -109,6 +91,12 @@ export default function ProductSection() {
                         : "border-ink/10 bg-white/50 hover:bg-white/80 hover:border-champagne/40"
                     } ${isRTL ? "text-right flex-row-reverse" : "text-left"}`}
                   >
+                    {/* Most Popular */}
+                    {tier.popular && (
+                      <span className="absolute -top-3 left-6 bg-ink text-cream text-[11px] font-medium tracking-[0.05em] uppercase px-3 py-0.5 rounded-full shadow-sm rtl:left-auto rtl:right-6">
+                        ★ {t("product.popularLabel")}
+                      </span>
+                    )}
                     {/* Badge */}
                     {tier.badge && (
                       <span className="absolute -top-3 right-6 bg-champagne text-ink text-[11px] font-medium tracking-[0.05em] uppercase px-3 py-0.5 rounded-full shadow-sm rtl:right-auto rtl:left-6">
@@ -148,19 +136,9 @@ export default function ProductSection() {
                           </span>
                         )}
                       </div>
-                      <p className="font-body text-[11px] text-champagne font-medium">
+                      <p className="font-body text-[11px] text-champagne-deep font-medium">
                         {tier.pricePerBottle} {lang === "ar" ? "درهم" : "AED"} / {lang === "ar" ? "عبوة" : "bottle"}
                       </p>
-                      <a
-                        href={cardOrderUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-1 mt-1 font-body text-[12px] font-medium text-ink underline decoration-champagne decoration-2 underline-offset-4 hover:text-champagne transition-colors min-h-[32px]"
-                      >
-                        {t("orderThisPackage")}
-                        <span aria-hidden="true">{isRTL ? "←" : "→"}</span>
-                      </a>
                     </div>
                   </div>
                 );
@@ -181,6 +159,9 @@ export default function ProductSection() {
               <p className="font-body text-[12px] text-ink-muted text-center leading-relaxed">
                 {t("product.orderGuarantee")}
               </p>
+              <p className="font-body text-[12px] text-ink-muted/90 text-center leading-relaxed">
+                {t("product.orderSteps")}
+              </p>
             </div>
           </div>
         </div>
@@ -188,7 +169,7 @@ export default function ProductSection() {
         {/* Real Ingredients Breakdown */}
         <div className="pt-12 border-t border-ink/10">
           <div className="max-w-3xl mb-8">
-            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
+            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-3">
               {lang === "ar" ? "التركيبة النقية" : "Clean Formulation"}
             </p>
             <h3 className="font-display text-[30px] sm:text-[40px] leading-[1.1] text-ink">
@@ -204,7 +185,7 @@ export default function ProductSection() {
               >
                 <div className="flex items-center justify-between">
                   <span className="w-2 h-2 rounded-full bg-champagne" />
-                  <span className="font-body text-[12px] font-semibold text-champagne tracking-wider uppercase bg-champagne/10 px-2.5 py-0.5 rounded">
+                  <span className="font-body text-[12px] font-semibold text-champagne-deep tracking-wider uppercase bg-champagne/10 px-2.5 py-0.5 rounded">
                     {item.amount}
                   </span>
                 </div>
@@ -222,7 +203,7 @@ export default function ProductSection() {
         {/* Numbered How to Use Sequence */}
         <div className="pt-12 border-t border-ink/10">
           <div className="max-w-3xl mb-8">
-            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
+            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-3">
               {lang === "ar" ? "إرشادات الاستخدام" : "Daily Protocol"}
             </p>
             <h3 className="font-display text-[30px] sm:text-[40px] leading-[1.1] text-ink">
@@ -250,7 +231,7 @@ export default function ProductSection() {
         {/* Why OmniaGlow (3 Trust Pillars) */}
         <div className="p-6 sm:p-10 lg:p-12 bg-white/70 border border-ink/10 rounded-3xl space-y-6">
           <div className="text-center max-w-2xl mx-auto">
-            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
+            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-3">
               {t("why.eyebrow")}
             </p>
             <h3 className="font-display text-[28px] sm:text-[38px] leading-[1.15] text-ink">

@@ -3,7 +3,19 @@
   "h2a": "Transparent formula.",
   "h2b": "Clinically proven ingredients.",
   "lead": "Every ingredient is listed with exact potency. Zero proprietary blends, zero harsh bleaching agents, and zero filler.",
-  "viewerHint": "Drag or move cursor to inspect all 4 angles",
+  "packagesTitle": "Choose your package",
+  "packagesSub": "More bottles, better value. Every order is Cash on Delivery.",
+  "popularLabel": "Most Popular",
+  "viewerHint": "Drag to compare Front / Side",
+  "viewer": {
+    "front": "Front",
+    "side": "Right Side",
+    "top": "Top",
+    "hint": "Drag to compare Front / Side",
+    "range": "Front ↔ Right",
+    "caption": "Front · Side · Top — real product photos.",
+    "pending": "photo pending"
+  },
   "tiers": [
     {
       "id": "1-bottle",
@@ -19,22 +31,22 @@
       "id": "2-bottles",
       "name": "2 Month Duo",
       "subtitle": "100 capsules · 50-day supply",
-      "price": 190,
+      "price": 179,
       "originalPrice": 198,
-      "pricePerBottle": 95,
+      "pricePerBottle": 89.5,
       "count": 2,
-      "badge": "Save 8 AED",
+      "badge": "Save 19 AED",
       "popular": true
     },
     {
       "id": "3-bottles",
       "name": "3 Month Transformation",
       "subtitle": "150 capsules · 75-day supply",
-      "price": 293,
+      "price": 249,
       "originalPrice": 297,
-      "pricePerBottle": 98,
+      "pricePerBottle": 83,
       "count": 3,
-      "badge": "Save 4 AED · Best Value",
+      "badge": "Save 48 AED · Best Value",
       "popular": false
     }
   ],
@@ -42,19 +54,22 @@
     { "src": "/product/front.png", "alt": "OmniaGlow Front" },
     { "src": "/product/right.png", "alt": "Right view" }
   ],
+  "ingredientsTitle": "What's inside, exactly.",
   "ingredients": [
-    { "name": "L-Glutathione", "amount": "600 mg", "desc": "The body's master antioxidant. Inhibits excess melanin synthesis for an even, luminous complexion. 600mg per bottle weight as per label." },
+    { "name": "L-Glutathione", "amount": "500 mg", "desc": "The body's master antioxidant. Inhibits excess melanin synthesis for an even, luminous complexion. 500mg per bottle weight as per label." },
     { "name": "Hydrolyzed Collagen Peptides (Type I & III)", "amount": "400 mg", "desc": "Bioavailable peptide micro-fragments that replenish the dermal matrix, restoring elasticity, firmness, and bounce." },
     { "name": "Vitamin C", "amount": "250 mg", "desc": "Essential cofactor that boosts natural glutathione recycling and accelerates cellular collagen synthesis. 250% NRV." },
     { "name": "Niacinamide (Vitamin B3)", "amount": "20 mg", "desc": "Calms inflammation, supports the lipid moisture barrier, and visibly refines skin texture. 143% NRV." },
     { "name": "Vitamin E (Natural, 100 IU)", "amount": "67 mg", "desc": "Fat-soluble antioxidant protecting cellular membranes against daily UV and environmental stressors. 479% NRV." }
   ],
+  "howToTitle": "Your daily ritual.",
   "howTo": [
     { "step": "01", "title": "Daily Dosage", "desc": "Take 2 capsules once daily with a full glass of water, preferably alongside breakfast or your morning meal. 25 servings per bottle." },
     { "step": "02", "title": "Hydration & Protection", "desc": "Drink 2–2.5 liters of water daily to support cellular detoxification, and apply broad-spectrum SPF every morning." },
     { "step": "03", "title": "Cumulative Transformation", "desc": "Week 1–2 boosts hydration and clarity. Weeks 4–6 reveal noticeable evening of tone and dark mark reduction. Store in a cool, dry place. Do not exceed dose." }
   ],
   "orderTierCta": "Order this package via WhatsApp",
-  "orderGuarantee": "Delivery in 2 days · Cash on Delivery Available Across UAE · GCC Compliant 100% · GMP Certified",
-  "shipping": "Cash on Delivery Available Across UAE · Delivery in 2 days"
+  "orderSteps": "Tap → a pre-filled message opens · Concierge confirms in ~30 min · Pay cash to the courier",
+  "orderGuarantee": "Pay cash at your door in 1–2 days (UAE) · GCC Compliant 100% · GMP Certified",
+  "shipping": "Cash on Delivery across the UAE · Delivery in 1–2 days"
 }

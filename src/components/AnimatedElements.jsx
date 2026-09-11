@@ -14,6 +14,7 @@ export function ScrollReveal({
 }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,9 +33,10 @@ export function ScrollReveal({
     return () => observer.disconnect();
   }, [delay, threshold, once]);
 
+  const shown = prefersReduced || isVisible;
   const baseStyles = {
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible
+    opacity: shown ? 1 : 0,
+    transform: shown
       ? "translate3d(0,0,0)"
       : direction === "up"
       ? "translate3d(0,40px,0)"
@@ -43,7 +45,7 @@ export function ScrollReveal({
       : direction === "left"
       ? "translate3d(40px,0,0)"
       : "translate3d(-40px,0,0)",
-    transition: `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
+    transition: prefersReduced ? "none" : `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
     willChange: "opacity, transform",
   };
 
@@ -65,6 +67,8 @@ export function StaggeredReveal({
 }) {
   const [visibleIndices, setVisibleIndices] = useState(new Set());
   const containerRef = useRef(null);
+  const prefersReduced = useReducedMotion();
+  const isShown = (i) => prefersReduced || visibleIndices.has(i);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -93,13 +97,13 @@ export function StaggeredReveal({
             key={i}
             className={itemClassName}
             style={{
-              opacity: visibleIndices.has(i) ? 1 : 0,
-              transform: visibleIndices.has(i)
+              opacity: isShown(i) ? 1 : 0,
+              transform: isShown(i)
                 ? "translate3d(0,0,0)"
                 : direction === "up"
                 ? "translate3d(0,30px,0)"
                 : "translate3d(0,-30px,0)",
-              transition: `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
+              transition: prefersReduced ? "none" : `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
               willChange: "opacity, transform",
             }}
           >
@@ -121,8 +125,10 @@ export function ParallaxImage({
 }) {
   const [offset, setOffset] = useState(0);
   const ref = useRef(null);
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
+    if (prefersReduced) return;
     const element = ref.current;
     if (!element) return;
 
@@ -142,7 +148,7 @@ export function ParallaxImage({
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [speed]);
+  }, [speed, prefersReduced]);
 
   return (
     <div ref={ref} className={`relative overflow-hidden ${wrapperClassName}`}>
@@ -151,7 +157,7 @@ export function ParallaxImage({
         alt={alt}
         className={className}
         style={{
-          transform: `translate3d(0, ${offset}px, 0)`,
+          transform: prefersReduced ? "none" : `translate3d(0, ${offset}px, 0)`,
           willChange: "transform",
           transition: "transform 0.1s linear",
         }}

@@ -112,32 +112,26 @@ export default function Home() {
                 </div>
               </ScrollReveal>
 
-              {/* Hook strip — 3 visual proofs right under the fold */}
-              <ScrollReveal delay={300} direction="up" duration={700}>
-                {/* Hook strip — one proof on mobile (diet), three on sm+ */}
-                <div className="pt-4 sm:pt-6 flex gap-3">
-                  <img src="/images/gallery/curated-beforeafter-eyes.jpg" alt="Before/after eyes" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="lazy" />
-                  <img src="/images/gallery/curated-hook-collage.jpg" alt="Real transformations collage" className="hidden sm:block w-24 h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="lazy" />
-                  <img src="/images/gallery/curated-hand-capsules.jpg" alt="Capsules in hand" className="hidden sm:block w-24 h-24 rounded-xl object-cover border border-ink/10 shadow-sm" loading="lazy" />
-                </div>
-                <p className="hidden sm:block mt-2 font-body text-[11px] tracking-[0.15em] uppercase text-ink/40">Real results — tap to see more ↓</p>
-              </ScrollReveal>
+              {/* What happens after the tap — kills stranger-danger anxiety */}
+              <p className="max-w-xl font-body text-[12.5px] leading-[1.6] text-ink-muted/90">
+                {t("hero.orderSteps")}
+              </p>
             </div>
 
-            {/* Right Product Visual Column */}
+            {/* Right Product Visual Column — real brand photo */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <FloatingElement intensity={8} rotation={0.2}>
-                <div className="relative max-w-[260px] sm:max-w-[420px] lg:max-w-[460px]">
+                <div className="relative max-w-[280px] sm:max-w-[360px] lg:max-w-[400px]">
                   {/* Subtle golden ambient glow */}
                   <div className="absolute inset-0 -z-10 bg-[radial-gradient(50%_50%_at_50%_50%,rgba(185,146,68,0.22)_0%,transparent_75%)] blur-2xl" />
-                  
+
                   <img
-                    src="/product/front.png"
-                    alt="OmniaGlow Glutathione Supplement Bottle"
-                    className="w-full h-auto object-contain drop-shadow-[0_45px_70px_rgba(33,29,24,0.25)]"
+                    src={t("hero.heroImage") || "/images/omnia-real-bottle.jpg"}
+                    alt="Real OmniaGlow Glutathione bottle — 500mg, 50 capsules"
+                    className="w-full aspect-[4/5] object-cover rounded-[2rem] border border-ink/10 drop-shadow-[0_45px_70px_rgba(33,29,24,0.25)]"
                     loading="eager"
                   />
-                  
+
                   {/* Soft Ground Shadow */}
                   <div className="mx-auto mt-2 h-4 w-3/4 rounded-[50%] bg-ink/20 blur-md" />
                 </div>

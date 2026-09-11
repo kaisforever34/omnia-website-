@@ -38,6 +38,10 @@ export default function SkinQuizSection() {
     setAnswers({});
   };
 
+  const goBack = useCallback(() => {
+    setStepIndex((i) => Math.max(0, i - 1));
+  }, []);
+
   const currentQuestion = questions.find((q) => STEPS[stepIndex] === q.id);
 
   // Generate dynamic WhatsApp URL from user's diagnostic answers
@@ -55,13 +59,23 @@ export default function SkinQuizSection() {
     },
   });
 
+  // Quiz recommendation price always mirrors the live Duo tier —
+  // a hardcoded copy here once drifted (190 vs 179) and broke trust.
+  const duoTier = (t("product.tiers") || []).find((x) => x.id === "2-bottles") || {};
+  const duoSave = (duoTier.originalPrice ?? duoTier.price ?? 0) - (duoTier.price ?? 0);
+  const duoPriceLabel = duoTier.price
+    ? lang === "ar"
+      ? `${duoTier.price} درهم · وفّري ${duoSave}`
+      : `${duoTier.price} AED · Save ${duoSave}`
+    : quiz.results?.recommendedPrice;
+
   return (
     <section id="quiz" className="scroll-mt-24 px-6 sm:px-10 lg:px-16 py-20 lg:py-28 relative">
       <div className="max-w-4xl mx-auto">
         {/* Step 0: Intro */}
         {currentStep === "intro" && (
           <div className="text-center max-w-2xl mx-auto animate-fade-up">
-            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-4">
+            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-4">
               {quiz.eyebrow}
             </p>
             <h2 className="font-display font-normal leading-[1.05] tracking-[-0.02em] text-[38px] sm:text-[52px] lg:text-[60px] text-ink">
@@ -90,7 +104,7 @@ export default function SkinQuizSection() {
           <div className="max-w-xl mx-auto animate-fade-up">
             {/* Progress bar */}
             <div className="mb-8 text-center">
-              <p className="font-body text-[12px] tracking-[0.25em] uppercase text-champagne mb-3">
+              <p className="font-body text-[12px] tracking-[0.25em] uppercase text-champagne-deep mb-3">
                 {quiz.progress
                   .replace("{current}", String(stepIndex))
                   .replace("{total}", String(questions.length))}
@@ -141,6 +155,17 @@ export default function SkinQuizSection() {
                 );
               })}
             </div>
+
+            {/* Back — previous answers are kept, nothing is lost */}
+            <div className="mt-6 text-center">
+              <button
+                onClick={goBack}
+                className="inline-flex items-center gap-2 font-body text-[13px] text-ink-muted hover:text-ink transition-colors cursor-pointer min-h-[44px] px-4"
+              >
+                <ArrowRight size={13} className="rotate-180 rtl:rotate-0" aria-hidden="true" />
+                <span>{quiz.back}</span>
+              </button>
+            </div>
           </div>
         )}
 
@@ -148,7 +173,7 @@ export default function SkinQuizSection() {
         {currentStep === "results" && (
           <div className="max-w-2xl mx-auto space-y-8 animate-fade-up">
             <div className="text-center">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-champagne/10 text-champagne font-body text-[12px] tracking-[0.2em] uppercase mb-4">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-champagne/10 text-champagne-deep font-body text-[12px] tracking-[0.2em] uppercase mb-4">
                 <Sparkles size={14} aria-hidden="true" />
                 {quiz.results?.eyebrow}
               </span>
@@ -164,7 +189,7 @@ export default function SkinQuizSection() {
             <div className="bg-white/80 border border-ink/10 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-ink/10">
                 <div>
-                  <p className="font-body text-[12px] tracking-[0.2em] uppercase text-champagne">
+                  <p className="font-body text-[12px] tracking-[0.2em] uppercase text-champagne-deep">
                     {lang === "ar" ? "الباقة الموصى بها" : "Recommended Package"}
                   </p>
                   <p className="font-display text-[22px] text-ink mt-1">
@@ -173,7 +198,7 @@ export default function SkinQuizSection() {
                 </div>
                 <div className="px-4 py-2 bg-cream rounded-lg border border-ink/10">
                   <span className="font-display text-[18px] text-ink font-medium">
-                    {quiz.results?.recommendedPrice}
+                    {duoPriceLabel}
                   </span>
                 </div>
               </div>
@@ -186,7 +211,7 @@ export default function SkinQuizSection() {
                 <ul className="space-y-2.5">
                   {quiz.results?.routineSummary?.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <span className="w-5 h-5 rounded-full bg-champagne/20 text-champagne flex items-center justify-center text-[11px] font-medium shrink-0 mt-0.5">
+                      <span className="w-5 h-5 rounded-full bg-champagne/20 text-champagne-deep flex items-center justify-center text-[11px] font-medium shrink-0 mt-0.5">
                         {idx + 1}
                       </span>
                       <span className="font-body text-[14px] leading-relaxed text-ink-muted">
@@ -203,7 +228,7 @@ export default function SkinQuizSection() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] text-white rounded-xl font-body text-[14px] tracking-[0.06em] uppercase hover:bg-[#1ebd59] transition-all duration-300 min-h-[50px] shadow-md hover:shadow-lg hover:scale-[1.01] active:scale-[0.99]"
+                  className="w-full group inline-flex items-center justify-center gap-3 px-8 py-4 bg-ink text-cream rounded-xl font-body text-[14px] tracking-[0.06em] uppercase hover:bg-champagne hover:text-ink transition-all duration-300 min-h-[50px] shadow-md hover:shadow-lg hover:scale-[1.01] active:scale-[0.99]"
                 >
                   <MessageCircle size={18} aria-hidden="true" />
                   <span className="font-medium">{quiz.results?.whatsappCta}</span>
@@ -214,11 +239,18 @@ export default function SkinQuizSection() {
               </div>
             </div>
 
-            {/* Retake Diagnostic */}
-            <div className="text-center pt-2">
+            {/* Back / Retake Diagnostic */}
+            <div className="text-center pt-2 flex items-center justify-center gap-6">
+              <button
+                onClick={goBack}
+                className="inline-flex items-center gap-2 font-body text-[13px] text-ink-muted hover:text-ink transition-colors cursor-pointer min-h-[44px] px-2"
+              >
+                <ArrowRight size={13} className="rotate-180 rtl:rotate-0" aria-hidden="true" />
+                <span>{quiz.back}</span>
+              </button>
               <button
                 onClick={restartQuiz}
-                className="inline-flex items-center gap-2 font-body text-[13px] text-ink-muted hover:text-ink transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 font-body text-[13px] text-ink-muted hover:text-ink transition-colors cursor-pointer min-h-[44px] px-2"
               >
                 <RotateCcw size={13} aria-hidden="true" />
                 <span>{quiz.restart}</span>

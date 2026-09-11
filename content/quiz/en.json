@@ -4,6 +4,8 @@
   "h2b": "glow regimen.",
   "lead": "Answer 4 quick diagnostic questions to receive a tailored routine and special concierge package for your specific skin goals.",
   "startCta": "Start the 60-second diagnostic",
+  "restart": "Retake diagnostic",
+  "back": "Back",
   "progress": "Question {current} of {total}",
   "questions": [
     {
@@ -51,7 +53,7 @@
     "title": "OmniaGlow Core Radiance Protocol",
     "subtitle": "Based on your diagnostic profile, your skin will benefit most from internal glutathione replenishment paired with synergistic collagen.",
     "recommendedPackage": "2-Month Duo Protocol (100 caps · 50-day supply)",
-    "recommendedPrice": "190 AED (Save 8 AED)",
+    "recommendedPrice": "179 AED (Save 19 AED)",
     "routineSummary": [
       "Morning: 2 Capsules OmniaGlow Glutathione with breakfast",
       "Hydration: Minimum 2 liters of water daily",

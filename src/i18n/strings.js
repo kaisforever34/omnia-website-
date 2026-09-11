@@ -33,9 +33,9 @@ export const en = {
     number: "971567710573",
     cta: "Chat on WhatsApp",
     general: "Hi OmniaGlow, I'd like to know more about the Glutathione formula.",
-    heroOrder: "Hi OmniaGlow, I'd like to order OmniaGlow L-Glutathione (500mg, 60 capsules — $79). Please share delivery options for [my city].",
+    heroOrder: "Hi OmniaGlow, I'd like to order OmniaGlow L-Glutathione (500mg, 50 capsules — 99 AED). Please share delivery options for [my city].",
     tierOrder: (count, price, name) =>
-      `Hi OmniaGlow, I would like to order the ${count} Bottle(s) Package (${name}) for $${price}. Please assist with my order.`,
+      `Hi OmniaGlow, I would like to order the ${count} Bottle(s) Package (${name}) for ${price} AED. Please assist with my order.`,
     quizResult: (concern, age, routineName) =>
       `Hi OmniaGlow, I completed the skin quiz!\n- Concern: ${concern}\n- Age: ${age}\n- Recommended: ${routineName}\nI would like to order my personalized routine.`,
     faqAsk: "Hi OmniaGlow, I have a question about shipping and taking the formula.",
@@ -135,9 +135,9 @@ export const ar = {
     number: "971567710573",
     cta: "التواصل عبر واتساب",
     general: "مرحباً امنية، أود معرفة المزيد عن تركيبة مكمل الغلوتاثيون.",
-    heroOrder: "مرحباً امنية، أود طلب امنية جلوتاثيوم (٥٠٠ ملغ، ٦٠ كبسولة — ٧٩$). يرجى مشاركة خيارات التوصيل لمدينتي.",
+    heroOrder: "مرحباً امنية، أود طلب امنية جلوتاثيوم (٥٠٠ ملغ، ٥٠ كبسولة — ٩٩ درهم). يرجى مشاركة خيارات التوصيل لمدينتي.",
     tierOrder: (count, price, name) =>
-      `مرحباً امنية، أود طلب باقة (${name}) - ${count} عبوة بسعر ${price}$ دولار. يرجى إتمام الطلب.`,
+      `مرحباً امنية، أود طلب باقة (${name}) - ${count} عبوة بسعر ${price} درهم. يرجى إتمام الطلب.`,
     quizResult: (concern, age, routineName) =>
       `مرحباً امنية، أكملت اختبار البشرة!\n- المشكلة: ${concern}\n- العمر: ${age}\n- الروتين المقترح: ${routineName}\nأود طلب باقتي المخصصة.`,
     faqAsk: "مرحباً امنية، لدي استفسار حول الشحن وطريقة استخدام التركيبة.",

@@ -8,7 +8,7 @@ export default function ProblemSection() {
     <section id="about" className="scroll-mt-24 px-6 sm:px-10 lg:px-16 py-12 lg:py-16 border-t border-ink/10 relative">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal delay={0} direction="up">
-          <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-4">
+          <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-4">
             {t("problem.eyebrow")}
           </p>
           <h2 className="font-display font-normal leading-[1.05] tracking-[-0.02em] text-[36px] sm:text-[48px] lg:text-[56px] text-ink max-w-2xl">

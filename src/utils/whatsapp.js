@@ -22,8 +22,8 @@ export function getWhatsAppUrl({ action = "general", lang = "en", data = {} }) {
   if (action === "heroOrder") {
     const text =
       lang === "ar"
-        ? "مرحباً امنية، أود طلب امنية جلوتاثيوم (٦٠٠ ملغ، ٥٠ كبسولة — ٩٩ درهم). يرجى مشاركة خيارات التوصيل لمدينتي."
-        : "Hi OmniaGlow, I'd like to order OmniaGlow L-Glutathione (600mg, 50 capsules — 99 AED). Please share delivery options for [my city].";
+        ? "مرحباً امنية، أود طلب امنية جلوتاثيوم (٥٠٠ ملغ، ٥٠ كبسولة — ٩٩ درهم). يرجى مشاركة خيارات التوصيل لمدينتي."
+        : "Hi OmniaGlow, I'd like to order OmniaGlow L-Glutathione (500mg, 50 capsules — 99 AED). Please share delivery options for [my city].";
     return buildWhatsAppUrl(text);
   }
 

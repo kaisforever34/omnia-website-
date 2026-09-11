@@ -18,6 +18,7 @@ export default function VideoAd() {
   const videoRef = useRef(null);
   const [muted, setMuted] = useState(true);
   const [showEndcard, setShowEndcard] = useState(false);
+  const [failed, setFailed] = useState(false);
   const orderUrl = getWhatsAppUrl({ action: "heroOrder", lang });
 
   const toggleMute = useCallback(() => {
@@ -43,7 +44,7 @@ export default function VideoAd() {
         {/* Copy */}
         <ScrollReveal delay={0} direction="up">
           <div className={isRTL ? "text-right" : "text-left"}>
-            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne mb-3">
+            <p className="font-body text-[13px] tracking-[0.3em] uppercase text-champagne-deep mb-3">
               {t("videoAdBadge")}
             </p>
             <h2 className="font-display text-[30px] sm:text-[40px] lg:text-[48px] leading-[1.1] text-ink">
@@ -70,21 +71,32 @@ export default function VideoAd() {
           <div className="flex justify-center">
             <div className="relative w-full max-w-[300px] sm:max-w-[340px]">
               <div className="relative overflow-hidden rounded-[2rem] border border-ink/10 shadow-[0_30px_60px_rgba(33,29,24,0.25)] bg-ink">
-                <video
-                  ref={videoRef}
-                  src="/videos/omnia-ad-15s.mp4"
-                  poster="/videos/omnia-ad-poster.jpg"
-                  className="w-full aspect-[9/16] object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  onTimeUpdate={onTimeUpdate}
-                  onClick={toggleMute}
-                  aria-label={t("videoAdBadge")}
-                />
-                {/* Sound toggle */}
+                {failed ? (
+                  <img
+                    src="/videos/omnia-ad-poster.jpg"
+                    alt={t("videoAdBadge")}
+                    className="w-full aspect-[9/16] object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <video
+                    ref={videoRef}
+                    src="/videos/omnia-ad-15s.mp4"
+                    poster="/videos/omnia-ad-poster.jpg"
+                    className="w-full aspect-[9/16] object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    onTimeUpdate={onTimeUpdate}
+                    onClick={toggleMute}
+                    onError={() => setFailed(true)}
+                    aria-label={t("videoAdBadge")}
+                  />
+                )}
+                {/* Sound toggle (hidden when video failed — poster needs no mute) */}
+                {!failed && (
                 <button
                   onClick={toggleMute}
                   aria-label={muted ? "Unmute video" : "Mute video"}
@@ -93,6 +105,7 @@ export default function VideoAd() {
                 >
                   {muted ? <VolumeX size={17} aria-hidden="true" /> : <Volume2 size={17} aria-hidden="true" />}
                 </button>
+                )}
                 {/* Muted hint (first loop only, until endcard shows) */}
                 {!showEndcard && muted && (
                   <span className="absolute bottom-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-ink/60 text-cream font-body text-[11px] backdrop-blur-sm pointer-events-none whitespace-nowrap">
@@ -103,7 +116,7 @@ export default function VideoAd() {
                 {/* End-card overlay: price + COD + WhatsApp CTA */}
                 <div
                   className={`absolute inset-x-0 bottom-0 p-4 pt-10 bg-gradient-to-t from-ink/90 via-ink/60 to-transparent transition-opacity duration-300 ${
-                    showEndcard ? "opacity-100" : "pointer-events-none opacity-0"
+                    showEndcard || failed ? "opacity-100" : "pointer-events-none opacity-0"
                   }`}
                 >
                   <p className="text-center font-display text-cream text-[22px] leading-tight">
@@ -116,8 +129,8 @@ export default function VideoAd() {
                     href={orderUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    tabIndex={showEndcard ? 0 : -1}
-                    className="mt-3 w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] text-white font-body text-[13px] tracking-[0.06em] uppercase font-medium min-h-[48px] active:scale-[0.98]"
+                    tabIndex={showEndcard || failed ? 0 : -1}
+                    className="mt-3 w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-cream text-ink font-body text-[13px] tracking-[0.06em] uppercase font-medium min-h-[48px] hover:bg-white transition-all active:scale-[0.98]"
                   >
                     <MessageCircle size={16} aria-hidden="true" />
                     <span>{t("orderWhatsApp")}</span>

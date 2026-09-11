@@ -1,21 +1,33 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { I18nProvider } from "./i18n/I18nContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import { trackWhatsAppClick, inferWhatsAppSource } from "./utils/pixel";
 import Home from "./pages/Home";
-import EmailCapture from "./components/EmailCapture";
 import WhatsAppChat from "./components/WhatsAppChat";
 import "./index.css";
+
+function useWhatsAppPixel() {
+  useEffect(() => {
+    const onClick = (e) => {
+      const a = e.target?.closest?.('a[href*="wa.me"]');
+      if (!a) return;
+      trackWhatsAppClick(inferWhatsAppSource(a));
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
+}
 
 function AppRoutes() {
   const location = useLocation();
   const langFromUrl = location.pathname.split("/")[1];
   const initialLang = (langFromUrl === "ar" || langFromUrl === "en") ? langFromUrl : "en";
+  useWhatsAppPixel();
 
   return (
     <I18nProvider initialLang={initialLang}>
-      <EmailCapture variant="modal" />
       <WhatsAppChat />
       <Routes>
         <Route path="/" element={<Navigate to="/en" replace />} />
