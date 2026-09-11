@@ -23,6 +23,7 @@ export const en = {
     results: "Results",
     quiz: "Skin Quiz",
     faq: "FAQ",
+    orderShort: "Order",
   },
 
   // WhatsApp Messages & Configuration
@@ -128,6 +129,7 @@ export const ar = {
     results: "النتائج",
     quiz: "اختبار البشرة",
     faq: "الأسئلة الشائعة",
+    orderShort: "اطلبي",
   },
 
   // WhatsApp

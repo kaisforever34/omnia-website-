@@ -16,24 +16,47 @@ export default function StickyOrderBar() {
   const href = getWhatsAppUrl({ action: "heroOrder", lang });
 
   useEffect(() => {
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        setVisible((prev) => {
-          const next = window.scrollY > window.innerHeight * 0.6;
-          if (next !== prev) {
-            window.dispatchEvent(new CustomEvent(STICKY_BAR_EVENT, { detail: next }));
-          }
-          return next;
-        });
-        ticking = false;
+    // Show the bar the moment the hero order button scrolls out of view —
+    // from then on, buying is always one thumb-tap away. Fall back to a
+    // scroll threshold if the hero CTA isn't on this page (yet).
+    const heroCta = document.querySelector('#hero a[href*="wa.me"]');
+    const apply = (next) => {
+      setVisible((prev) => {
+        if (next !== prev) {
+          window.dispatchEvent(new CustomEvent(STICKY_BAR_EVENT, { detail: next }));
+        }
+        return next;
       });
     };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    if (!heroCta) {
+      let ticking = false;
+      const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          apply(window.scrollY > window.innerHeight * 0.5);
+          ticking = false;
+        });
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      return () => window.removeEventListener("scroll", onScroll);
+    }
+    const onScrollTop = () => apply(window.scrollY > 40 && !heroInView.current);
+    const heroInView = { current: true };
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        heroInView.current = entry.isIntersecting;
+        apply(window.scrollY > 40 && !entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+    io.observe(heroCta);
+    window.addEventListener("scroll", onScrollTop, { passive: true });
+    return () => {
+      io.disconnect();
+      window.removeEventListener("scroll", onScrollTop);
+    };
   }, []);
 
   return (

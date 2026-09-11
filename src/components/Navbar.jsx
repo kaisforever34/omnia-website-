@@ -96,6 +96,18 @@ export default function Navbar() {
               <span>{t("orderWhatsApp")}</span>
             </a>
 
+            {/* Mobile: always-visible compact order pill — buying never hides behind the menu */}
+            <a
+              href={headerWhatsAppUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sm:hidden inline-flex items-center gap-1.5 px-4 py-2 bg-ink text-cream rounded-full font-body text-[12px] tracking-[0.04em] uppercase hover:bg-champagne hover:text-ink transition-colors min-h-[40px] active:scale-[0.98]"
+              aria-label={t("orderWhatsApp")}
+            >
+              <MessageCircle size={14} aria-hidden="true" />
+              <span>{t("nav.orderShort")}</span>
+            </a>
+
             {/* Mobile menu toggle */}
             <button
               className="lg:hidden w-11 h-11 flex items-center justify-center text-ink rounded-lg hover:bg-ink/5 transition-colors"
