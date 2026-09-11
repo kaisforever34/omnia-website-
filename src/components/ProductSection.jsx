@@ -72,6 +72,17 @@ export default function ProductSection() {
             <div className="space-y-3.5" role="radiogroup" aria-label={t("product.packagesTitle")}>
               {tiers.map((tier) => {
                 const isSelected = tier.id === selectedTierId;
+                // Each card carries its own order link with this tier baked in,
+                // so the WhatsApp message can never mismatch the package.
+                const cardOrderUrl = getWhatsAppUrl({
+                  action: "tierOrder",
+                  lang,
+                  data: {
+                    count: tier.count || 1,
+                    price: tier.price || 99,
+                    name: tier.name || "OmniaGlow Glutathione",
+                  },
+                });
                 return (
                   <div
                     key={tier.id}
@@ -139,6 +150,16 @@ export default function ProductSection() {
                       <p className="font-body text-[11px] text-champagne-deep font-medium">
                         {tier.pricePerBottle} {lang === "ar" ? "درهم" : "AED"} / {lang === "ar" ? "عبوة" : "bottle"}
                       </p>
+                      <a
+                        href={cardOrderUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 mt-1 font-body text-[12px] font-medium text-ink underline decoration-champagne decoration-2 underline-offset-4 hover:text-champagne transition-colors min-h-[32px]"
+                      >
+                        {t("orderThisPackage")}
+                        <span aria-hidden="true">{isRTL ? "←" : "→"}</span>
+                      </a>
                     </div>
                   </div>
                 );
