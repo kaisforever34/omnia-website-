@@ -96,21 +96,27 @@ export default function Gallery() {
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6"
         >
           <figure className="relative overflow-hidden bg-cream/40 border border-ink/10 rounded-2xl h-[360px] sm:h-[400px] lg:h-[460px]">
-            <ParallaxImage
-              src="/images/gallery/lifestyle-bottle.jpg"
-              alt="Woman smiling with the OmniaGlow Glutathione bottle"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
-              speed={0.08}
-              loading="lazy"
+            <video
+              src="/videos/omnia-bottle-motion.mp4"
+              aria-label="Woman smiling with the OmniaGlow Glutathione bottle"
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
             />
           </figure>
           <figure className="relative overflow-hidden bg-cream/40 border border-ink/10 rounded-2xl h-[360px] sm:h-[400px] lg:h-[460px]">
-            <ParallaxImage
-              src="/images/gallery/curated-hand-capsules.jpg"
-              alt="Premium OmniaGlow capsules — 50 capsules of L-Glutathione and Vitamins"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
-              speed={0.08}
-              loading="lazy"
+            <video
+              src="/videos/omnia-capsule-motion.mp4"
+              aria-label="Hands picking up OmniaGlow capsules"
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
             />
           </figure>
         </StaggeredReveal>
@@ -135,8 +141,8 @@ export default function Gallery() {
         <ScrollReveal delay={0} direction="up">
           <figure className="relative overflow-hidden rounded-2xl bg-cream/40 border border-ink/10">
             <img
-              src="/images/gallery/curated-natural-glow.jpg"
-              alt="Your Natural Glow — OmniaGlow"
+              src="/images/gallery/omnia-brand-collage.jpg"
+              alt="OmniaGlow 500mg collage — real customers, real bottle, glutathione plus collagen and vitamins C, E and B3"
               className="w-full h-auto object-cover"
               loading="lazy"
             />
