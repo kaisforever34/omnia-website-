@@ -2,6 +2,8 @@ backend:
   name: github
   repo: kaisforever34/omnia-website-
   branch: main
+  # Own login bridge on Cloudflare (replaces Netlify's auth service).
+  auth_endpoint: https://omniaglow.pages.dev/api
   commit_messages:
     create: "cms: create {{collection}} {{slug}}"
     update: "cms: update {{collection}} {{slug}}"
@@ -15,8 +17,8 @@ publish_mode: editorial_workflow
 local_backend: true
 media_folder: "public/uploads"
 public_folder: "/uploads"
-site_url: "https://omniaglow.netlify.app"
-display_url: "https://omniaglow.netlify.app"
+site_url: "https://omniaglow.pages.dev"
+display_url: "https://omniaglow.pages.dev"
 logo_url: "/favicon.svg"
 locale: en
 
